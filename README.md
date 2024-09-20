@@ -1,1 +1,1 @@
-# frontend-progemy
+# progemy-client
