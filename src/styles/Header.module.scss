@@ -1,0 +1,128 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  height: 8vw;
+
+  background-color: var(--darkGrey-color);
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--isocpeur-font), sans-serif;
+    font-size: 2.5vw;
+    text-decoration: none;
+  }
+
+  &__logoProge {
+    color: var(--accent-color);
+  }
+
+  &__logoMy {
+    color: var(--white-color);
+  }
+
+  &__divider {
+    border: 1px solid #3a3d43;
+    width: 5vw;
+    height: 0px;
+    transform: rotate(-90deg);
+    flex-shrink: 1;
+  }
+
+  &__catalog,
+  &__resources {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  &__catalogText,
+  &__resourcesText {
+    font-family: var(--isocpeur-font), sans-serif;
+    color: var(--lightGrey-color);
+    font-size: 2.5vw;
+  }
+
+  &__catalogDropdown,
+  &__resourcesDropdown {
+    position: relative;
+    top: 3px;
+    height: 10%;
+    width: 10%;
+  }
+
+  &__catalogDropdown {
+    left: 10px;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+  }
+
+  &__searchBtn {
+    position: relative;
+    left: 10%;
+
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  &__searchIcon {
+    width: 2vw;
+    height: 2vw;
+  }
+
+  &__searchInput {
+    font-size: 1.5vw;
+    text-indent: 4vw;
+
+    border: 1px solid #7cffd8;
+    border-radius: 10px;
+    width: 27vw;
+    height: 3.5vw;
+
+    font-family: sans-serif;
+    color: var(--lightGrey-color);
+    background-color: var(--darkBlue-color);
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  &__buttonsLogin,
+  &__buttonsSignup {
+    font-size: 1.6vw;
+    font-family: var(--spacemono-font), sans-serif;
+    cursor: pointer;
+  }
+
+  &__buttonsLogin {
+    margin-right: 1vw;
+
+    color: var(--white-color);
+
+    background: none;
+    border: none;
+  }
+
+  &__buttonsSignup {
+    color: var(--darkGrey-color);
+
+    background-color: var(--accent-color);
+
+    border-radius: 5px;
+    width: 10vw;
+    height: 3.5vw;
+  }
+}

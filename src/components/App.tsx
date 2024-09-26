@@ -1,9 +1,13 @@
-import React from 'react';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./Header";
 
 const App = () => (
-    <div className={"hello"}>
-        <p>GANDALF EPIC SAX GAY!!!🧙‍♂️</p>
-    </div>
-)
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Header />} />
+    </Routes>
+  </BrowserRouter>
+);
 
 export default App;
