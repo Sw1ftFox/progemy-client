@@ -1,0 +1,39 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  background-color: var(--darkBlue-color);
+  border-radius: 12px;
+  width: 20%;
+
+  &__image {
+    margin: 0 auto;
+    margin-top: 15%;
+    width: 40%;
+  }
+
+  &__name {
+    color: var(--white-color);
+    text-align: center;
+    margin-top: 20%;
+
+    font-weight: 600;
+    font-size: 1.3vw;
+    line-height: 150%;
+    font-family: sans-serif;
+  }
+
+  &__declaration {
+    color: var(--lightGrey-color);
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 3%;
+    width: 80%;
+
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 150%;
+    font-family: sans-serif;
+  }
+}
