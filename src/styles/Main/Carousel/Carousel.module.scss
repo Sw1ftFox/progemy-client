@@ -1,0 +1,50 @@
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  background-color: var(--black-color);
+
+  &__slider {
+    margin-top: 5vw;
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__slider_ArrowLeft {
+    width: 10%;
+    cursor: pointer;
+  }
+
+  &__sliderInfo {
+    width: 80%;
+  }
+
+  &__slider_ArrowRight {
+    width: 10%;
+    cursor: pointer;
+    transform: rotate(180deg);
+  }
+
+  &__dots {
+    width: 15%;
+    margin: 0 auto;
+    margin-bottom: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__dots_FullCircle {
+    cursor: pointer;
+    fill: var(--accent-color);
+  }
+
+  &__dots_HollowCircle {
+    cursor: pointer;
+  }
+}

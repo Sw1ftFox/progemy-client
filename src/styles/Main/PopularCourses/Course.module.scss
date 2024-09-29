@@ -1,0 +1,84 @@
+.course {
+  background-image: url("/assets/svg/course/bgcourse.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  margin-right: 5%;
+  margin-bottom: 5%;
+
+  cursor: pointer;
+
+  &__icon {
+    width: 20%;
+    margin-left: 5%;
+    margin-top: 5%;
+  }
+
+  &__characteristics {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 60%;
+    margin-left: 30%;
+    position: relative;
+    bottom: 10%;
+    color: var(--black-color);
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 1.2vw;
+  }
+
+  &__characteristics_price {
+    width: 30%;
+    margin-left: 15%;
+  }
+
+  &__characteristics_rating {
+    width: 30%;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__characteristics_rating_star {
+    margin-left: 15%;
+    width: 20%;
+  }
+
+  &__characteristics_time {
+    width: 30%;
+  }
+
+  &__line {
+    width: 60%;
+
+    position: relative;
+    bottom: 10%;
+    margin-left: 30%;
+  }
+
+  &__text {
+    width: 85%;
+    font-family: var(--redhatdisplay-font), sans-serif;
+    color: var(--black-color);
+    margin-left: 7%;
+    margin-bottom: 5%;
+    font-size: 1.2vw;
+  }
+
+  &__text_title {
+    font-weight: 700;
+    margin-bottom: 2%;
+  }
+
+  &__text_declaration {
+    font-weight: 400;
+  }
+}
+
+@media (width <= 1100px) {
+  .course__icon {
+    margin-top: 0;
+  }
+}

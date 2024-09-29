@@ -9,8 +9,33 @@
 }
 
 @font-face {
-  font-family: "SPACEMONO";
-  src: url("../../assets/fonts/SpaceMono-Regular.ttf") format("ttf");
+	font-family: 'Space Mono Regular';
+	src: url('../../assets/fonts/spacemono/space_mono_regular.eot'); /* IE 9 Compatibility Mode */
+	src: url('../../assets/fonts/spacemono/space_mono_regular.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../../assets/fonts/spacemono/space_mono_regular.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../../assets/fonts/spacemono/space_mono_regular.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../../assets/fonts/spacemono/space_mono_regular.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../../assets/fonts/spacemono/space_mono_regular.svg#space_mono_regular') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+	font-family: 'Viaoda Libre Regular';
+	src: url('../../assets/fonts/viaodalibre/viaoda_libre_regular.eot'); /* IE 9 Compatibility Mode */
+	src: url('../../assets/fonts/viaodalibre/viaoda_libre_regular.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../../assets/fonts/viaodalibre/viaoda_libre_regular.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../../assets/fonts/viaodalibre/viaoda_libre_regular.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../../assets/fonts/viaodalibre/viaoda_libre_regular.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../../assets/fonts/viaodalibre/viaoda_libre_regular.svg#viaoda_libre_regular') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+	font-family: 'RedHatDisplay-Black';
+	src: url('../../assets/fonts/redhatdisplay/redhatdisplay-black.eot'); /* IE 9 Compatibility Mode */
+	src: url('../../assets/fonts/redhatdisplay/redhatdisplay-black.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../../assets/fonts/redhatdisplay/redhatdisplay-black.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../../assets/fonts/redhatdisplay/redhatdisplay-black.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../../assets/fonts/redhatdisplay/redhatdisplay-black.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../../assets/fonts/redhatdisplay/redhatdisplay-black.svg#redhatdisplay-black') format('svg'); /* Chrome < 4, Legacy iOS */
 }
 
 :root {
@@ -19,8 +44,12 @@
   --darkGrey-color: #1e1f25;
   --lightGrey-color: #adb3bf;
   --isocpeur-font: "ISOCPEUR";
-  --spacemono-font: "SPACEMONO";
+  --spacemono-font: "Space Mono Regular";
+  --viaodalibre-font: "Viaoda Libre Regular";
+  --redhatdisplay-font: "RedHatDisplay-Black";
   --darkBlue-color: #272a34;
+  --black-color: #141618;
+  --pink-color: #f4b9b9;
 }
 
 /* body, html, #app {

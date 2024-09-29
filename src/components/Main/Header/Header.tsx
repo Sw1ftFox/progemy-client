@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-const styles = require("../styles/Header.module.scss");
+const styles = require("../../../styles/Main/Header.module.scss");
 
 export default function Header() {
   const [searchQuery, setSearchQuery] = useState("");
