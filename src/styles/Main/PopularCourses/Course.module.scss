@@ -20,17 +20,17 @@
     justify-content: space-around;
 
     width: 60%;
-    margin-left: 30%;
+    margin-left: 25%;
     position: relative;
     bottom: 10%;
     color: var(--black-color);
     font-family: sans-serif;
     font-weight: 400;
-    font-size: 1.2vw;
+    font-size: 1.5vw;
   }
 
   &__characteristics_price {
-    width: 30%;
+    width: 40%;
     margin-left: 15%;
   }
 
@@ -51,11 +51,11 @@
   }
 
   &__line {
-    width: 60%;
+    width: 70%;
 
     position: relative;
     bottom: 10%;
-    margin-left: 30%;
+    margin-left: 25%;
   }
 
   &__text {
@@ -64,7 +64,7 @@
     color: var(--black-color);
     margin-left: 7%;
     margin-bottom: 5%;
-    font-size: 1.2vw;
+    font-size: 1.3vw;
   }
 
   &__text_title {
