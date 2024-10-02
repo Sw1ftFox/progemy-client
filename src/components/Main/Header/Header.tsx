@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import Logo from "../Logo";
 const styles = require("../../../styles/Main/Header.module.scss");
 
 export default function Header() {
@@ -12,10 +12,7 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <Link to="/" className={styles.header__logo}>
-        <div className={styles.header__logoProge}>Proge</div>
-        <div className={styles.header__logoMy}>My</div>
-      </Link>
+      <Logo />
       <svg
         className={styles.header__divider}
         width="1"

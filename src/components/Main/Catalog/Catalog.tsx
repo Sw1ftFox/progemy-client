@@ -27,10 +27,7 @@ export default function Catalog() {
               />
             </svg>
           </button>
-          <ul
-            className={styles.main__sort_container_options}
-            style={{ display: "none" }}
-          >
+          <ul className={styles.main__sort_container_options}>
             <li className={styles.main__sort_container_options_item}>
               По рейтингу
             </li>

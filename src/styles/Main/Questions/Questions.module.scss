@@ -1,0 +1,23 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 5vw;
+  padding-bottom: 3vw;
+  background-color: var(--darkGrey-color);
+
+  &__title {
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 3vw;
+    color: var(--white-color);
+    padding-left: 3%;
+  }
+
+  &__questions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    margin: 3% auto 0 auto;
+    width: 95%;
+  }
+}
