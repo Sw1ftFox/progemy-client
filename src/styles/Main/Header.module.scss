@@ -2,9 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-
   height: 8vw;
-
   background-color: var(--darkGrey-color);
 
   &__divider {
@@ -29,6 +27,12 @@
     font-family: var(--isocpeur-font), sans-serif;
     color: var(--lightGrey-color);
     font-size: 2.5vw;
+    transition: 0.5s;
+  }
+
+  &__catalog:hover &__catalogText,
+  &__resources:hover &__resourcesText {
+    color: var(--accent-color);
   }
 
   &__catalogDropdown,
@@ -37,10 +41,21 @@
     top: 3px;
     height: 10%;
     width: 10%;
+    transition: 0.5s;
   }
 
   &__catalogDropdown {
     left: 10px;
+  }
+
+  &__catalog:hover &__catalogDropdown,
+  &__resources:hover &__resourcesDropdown {
+    transform: rotate(180deg);
+  }
+
+  &__catalog:hover &__catalogDropdown path,
+  &__resources:hover &__resourcesDropdown path {
+    stroke: var(--accent-color);
   }
 
   &__search {
@@ -61,6 +76,10 @@
   &__searchIcon {
     width: 2vw;
     height: 2vw;
+  }
+
+  &__searchIcon:hover {
+    stroke: var(--white-color);
   }
 
   &__searchInput {
@@ -87,6 +106,7 @@
     font-size: 1.6vw;
     font-family: var(--spacemono-font), sans-serif;
     cursor: pointer;
+    transition: 0.5s;
   }
 
   &__buttonsLogin {
@@ -98,6 +118,10 @@
     border: none;
   }
 
+  &__buttonsLogin:hover {
+    color: var(--accent-color);
+  }
+
   &__buttonsSignup {
     color: var(--darkGrey-color);
 
@@ -106,5 +130,11 @@
     border-radius: 5px;
     width: 10vw;
     height: 3.5vw;
+  }
+
+  &__buttonsSignup:hover {
+    color: var(--white-color);
+    background-color: transparent;
+    border: none;
   }
 }

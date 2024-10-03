@@ -2,9 +2,13 @@ import React from "react";
 const styles = require("../../../styles/Main/Carousel/ProgCard.module.scss");
 const imageSrc = require("../../../../assets/svg/carousel/programmingCard/Picture.png");
 
-export default function ProgCard() {
+interface SlideProps {
+  isActive: boolean;
+}
+
+export default function ProgCard({isActive} : SlideProps) {
   return (
-    <div className={styles.slide}>
+    <div className={`${styles.slide} ${isActive ? styles.slide__active : ''}`}>
       <div className={styles.slide__top}>
         <svg
           className={styles.slide__top_firstCorner}

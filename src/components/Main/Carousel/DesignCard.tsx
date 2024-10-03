@@ -2,9 +2,13 @@ import React from "react";
 const styles = require("../../../styles/Main/Carousel/Design.module.scss");
 const imageSrc = require("../../../../assets/svg/carousel/designCard/Picture.png");
 
-export default function DesignCard() {
+interface SlideProps {
+  isActive: boolean;
+}
+
+export default function DesignCard({isActive} : SlideProps) {
   return (
-    <div className={styles.slide}>
+    <div className={`${styles.slide} ${isActive ? styles.slide__active : ''}`}>
       <div className={styles.slide__top}>
         <svg
           className={styles.slide__top_firstCorner}
@@ -17,14 +21,14 @@ export default function DesignCard() {
           <path
             d="M4 1.5H120"
             stroke="#BB8E8E"
-            stroke-width="3"
-            stroke-linecap="round"
+            strokeWidth="3"
+            strokeLinecap="round"
           />
           <path
             d="M2 3.5L1.99999 119.5"
             stroke="#BB8E8E"
-            stroke-width="3"
-            stroke-linecap="round"
+            strokeWidth="3"
+            strokeLinecap="round"
           />
         </svg>
         <svg
@@ -38,14 +42,14 @@ export default function DesignCard() {
           <path
             d="M4 1.5H120"
             stroke="#BB8E8E"
-            stroke-width="3"
-            stroke-linecap="round"
+            strokeWidth="3"
+            strokeLinecap="round"
           />
           <path
             d="M2 3.5L1.99999 119.5"
             stroke="#BB8E8E"
-            stroke-width="3"
-            stroke-linecap="round"
+            strokeWidth="3"
+            strokeLinecap="round"
           />
         </svg>
       </div>
@@ -81,14 +85,14 @@ export default function DesignCard() {
           <path
             d="M4 1.5H120"
             stroke="#BB8E8E"
-            stroke-width="3"
-            stroke-linecap="round"
+            strokeWidth="3"
+            strokeLinecap="round"
           />
           <path
             d="M2 3.5L1.99999 119.5"
             stroke="#BB8E8E"
-            stroke-width="3"
-            stroke-linecap="round"
+            strokeWidth="3"
+            strokeLinecap="round"
           />
         </svg>
         <svg
@@ -102,14 +106,14 @@ export default function DesignCard() {
           <path
             d="M4 1.5H120"
             stroke="#BB8E8E"
-            stroke-width="3"
-            stroke-linecap="round"
+            strokeWidth="3"
+            strokeLinecap="round"
           />
           <path
             d="M2 3.5L1.99999 119.5"
             stroke="#BB8E8E"
-            stroke-width="3"
-            stroke-linecap="round"
+            strokeWidth="3"
+            strokeLinecap="round"
           />
         </svg>
       </div>

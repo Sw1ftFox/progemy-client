@@ -1,6 +1,7 @@
 import React from "react";
 import Author from "./Author";
 const styles = require("../../../styles/Main/BestAuthors/BestAuthors.module.scss");
+import { authorsData } from "../../../data";
 
 export default function BestAuthors() {
   return (
@@ -30,17 +31,16 @@ export default function BestAuthors() {
             y2="1.50331"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="white" stop-opacity="0.04" />
-            <stop offset="0.484182" stop-color="white" stop-opacity="0.2" />
-            <stop offset="1" stop-color="white" stop-opacity="0.04" />
+            <stop stopColor="white" stopOpacity="0.04" />
+            <stop offset="0.484182" stopColor="white" stopOpacity="0.2" />
+            <stop offset="1" stopColor="white" stopOpacity="0.04" />
           </linearGradient>
         </defs>
       </svg>
       <div className={styles.main__authors}>
-        <Author />
-        <Author />
-        <Author />
-        <Author />
+      {authorsData.map((item, index) => (
+          <Author key={index} data={item} />
+      ))}
       </div>
     </div>
   );

@@ -14,4 +14,12 @@
   &__my {
     color: var(--white-color);
   }
+
+  &:hover &__proge {
+    color: var(--white-color);
+  }
+
+  &:hover &__my {
+    color: var(--accent-color);
+  }
 }

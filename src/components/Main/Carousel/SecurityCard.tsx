@@ -2,9 +2,13 @@ import React from "react";
 const styles = require("../../../styles/Main/Carousel/Security.module.scss");
 const imageSrc = require("../../../../assets/svg/carousel/infosecurityCard/Picture.png");
 
-export default function SecurityCard() {
+interface SlideProps {
+  isActive: boolean;
+}
+
+export default function SecurityCard({isActive} : SlideProps) {
   return (
-    <div className={styles.slide}>
+    <div className={`${styles.slide} ${isActive ? styles.slide__active : ''}`}>
       <div className={styles.slide__top}>
         <svg
           className={styles.slide__top_firstCorner}
@@ -41,9 +45,9 @@ export default function SecurityCard() {
             cy="40.5"
             r="36"
             fill="#7CFFD8"
-            fill-opacity="0.3"
+            fillOpacity="0.3"
             stroke="#7CFFD8"
-            stroke-width="9"
+            strokeWidth="9"
           />
         </svg>
 
@@ -60,9 +64,9 @@ export default function SecurityCard() {
             cy="40.5"
             r="36"
             fill="#7CFFD8"
-            fill-opacity="0.3"
+            fillOpacity="0.3"
             stroke="#7CFFD8"
-            stroke-width="9"
+            strokeWidth="9"
           />
         </svg>
 
@@ -143,9 +147,9 @@ export default function SecurityCard() {
             cy="40.5"
             r="36"
             fill="#7CFFD8"
-            fill-opacity="0.3"
+            fillOpacity="0.3"
             stroke="#7CFFD8"
-            stroke-width="9"
+            strokeWidth="9"
           />
         </svg>
 
@@ -162,9 +166,9 @@ export default function SecurityCard() {
             cy="40.5"
             r="36"
             fill="#7CFFD8"
-            fill-opacity="0.3"
+            fillOpacity="0.3"
             stroke="#7CFFD8"
-            stroke-width="9"
+            strokeWidth="9"
           />
         </svg>
 

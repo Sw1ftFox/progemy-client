@@ -1,17 +1,67 @@
-import React from "react";
+import React, { useState } from "react";
 import Course from "../PopularCourses/Course";
 const styles = require("../../../styles/Main/Catalog/Catalog.module.scss");
+import { coursesData } from "../../../data";
+
+const getCourseCountText = (count: number) => {
+  const lastDigit = count % 10;
+  const lastTwoDigits = count % 100;
+
+  if (lastDigit === 1 && lastTwoDigits !== 11) {
+    return "курс";
+  } else if (
+    lastDigit >= 2 &&
+    lastDigit <= 4 &&
+    (lastTwoDigits < 12 || lastTwoDigits > 14)
+  ) {
+    return "курса";
+  } else {
+    return "курсов";
+  }
+};
 
 export default function Catalog() {
+  const [sortType, setSortType] = useState("popularity");
+  const [sortedCourses, setSortedCourses] = useState(coursesData);
+  const [isActive, setIsActive] = useState(false);
+
+  const handleSortChange = (newSortType: string) => {
+    setSortType(newSortType);
+
+    let sorted = [...coursesData];
+    if (newSortType === "rating") {
+      sorted.sort((a, b) => parseFloat(a.rating) - parseFloat(b.rating));
+    } else if (newSortType === "price") {
+      sorted.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+    } else if (newSortType === "time") {
+      sorted.sort((a, b) => parseFloat(a.time) - parseFloat(b.time));
+    }
+
+    setSortedCourses(sorted);
+  };
+
+  const toggleActive = () => {
+    setIsActive(!isActive); 
+  };
+
   return (
     <div className={styles.main}>
       <div className={styles.main__sort}>
         <div className={styles.main__sort_title}>Посмотреть полный каталог</div>
         <div className={styles.main__sort_container}>
-          <button className={styles.main__sort_container_button}>
-            По популярности
+          <button
+            className={`${styles.main__sort_container_button} ${
+              isActive ? styles.main__sort_container_button_active : ""
+            }`}
+            onClick={() => {
+              toggleActive();
+            }}
+          >
+            Сортировать по
             <svg
-              className={styles.main__sort_container_button_arrow}
+              className={`${styles.main__sort_container_button_arrow} ${
+                isActive ? styles.main__sort_container_button_arrow_active : ""
+              }`}
               width="27"
               height="13"
               viewBox="0 0 27 13"
@@ -21,36 +71,51 @@ export default function Catalog() {
               <path
                 d="M1 1L13.5 12L26 1"
                 stroke="#CFD3DA"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </button>
-          <ul className={styles.main__sort_container_options}>
-            <li className={styles.main__sort_container_options_item}>
+          <ul
+            className={`${styles.main__sort_container_options} ${
+              isActive ? styles.main__sort_container_options_active : ""
+            }`}
+          >
+            <li
+              className={styles.main__sort_container_options_item}
+              onClick={() => handleSortChange("popularity")}
+            >
+              По популярности
+            </li>
+            <li
+              className={styles.main__sort_container_options_item}
+              onClick={() => handleSortChange("rating")}
+            >
               По рейтингу
             </li>
-            <li className={styles.main__sort_container_options_item}>
+            <li
+              className={styles.main__sort_container_options_item}
+              onClick={() => handleSortChange("price")}
+            >
               По цене
             </li>
-            <li className={styles.main__sort_container_options_item}>
-              По дате
+            <li
+              className={styles.main__sort_container_options_item}
+              onClick={() => handleSortChange("time")}
+            >
+              По времени
             </li>
           </ul>
         </div>
-        <div className={styles.main__sort_searchCourses}>Найдено 724 курса</div>
+        <div className={styles.main__sort_searchCourses}>
+          Найдено {coursesData.length} {getCourseCountText(coursesData.length)}
+        </div>
       </div>
       <div className={styles.main__courses}>
-        <Course />
-        <Course />
-        <Course />
-        <Course />
-        <Course />
-        <Course />
-        <Course />
-        <Course />
-        <Course />
+        {sortedCourses.map((item, index) => (
+          <Course key={index} data={item} />
+        ))}
       </div>
     </div>
   );

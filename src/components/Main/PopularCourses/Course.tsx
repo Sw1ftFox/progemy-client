@@ -1,19 +1,27 @@
 import React from "react";
 const styles = require("../../../styles/Main/PopularCourses/Course.module.scss");
+import { ItemData } from "../../../data";
 
-// interface CourseProps {
-//   color: string;
-//   title: string;
-//   description: string;
-//   price: string;
-//   rating: string;
-//   time: string;
-// }
+const backgroundImages: { [key: string]: string } = {
+  programming: require("/assets/svg/course/programming.png"),
+  design: require("/assets/svg/course/design.png"),
+  security: require("/assets/svg/course/security.png"),
+};
 
-export default function Course() {
-  //props: CourseProps
+interface CourseProps {
+  data: ItemData;
+}
+
+export default function Course({ data }: CourseProps) {
+  const background =
+    backgroundImages[data.area] ||
+    require("/assets/svg/course/programming.png");
+
   return (
-    <div className={styles.course}>
+    <div
+      className={styles.course}
+      style={{ backgroundImage: `url(${background})` }}
+    >
       <svg
         className={styles.course__icon}
         width="110"
@@ -29,7 +37,7 @@ export default function Course() {
             width="85.2148"
             height="84.0891"
             rx="8"
-            fill="#D2BFE6"
+            fill="none"
           />
           <rect
             x="13.1824"
@@ -39,7 +47,7 @@ export default function Course() {
             rx="7.5"
             stroke="#0F1014"
           />
-          <g clip-path="url(#clip0_16_477)">
+          <g clipPath="url(#clip0_16_477)">
             <path
               d="M68.6109 60.1493C68.07 60.1518 67.5367 60.2763 67.0506 60.5136L61.8292 55.2922H57.6824V57.7208H60.8225L65.3336 62.2318C65.0961 62.7179 64.9712 63.2512 64.9681 63.7922C64.9681 64.5127 65.1817 65.217 65.582 65.8161C65.9823 66.4151 66.5512 66.882 67.2169 67.1578C67.8825 67.4335 68.615 67.5056 69.3216 67.3651C70.0283 67.2245 70.6774 66.8775 71.1868 66.3681C71.6963 65.8586 72.0432 65.2095 72.1838 64.5029C72.3244 63.7962 72.2522 63.0638 71.9765 62.3981C71.7008 61.7325 71.2339 61.1636 70.6348 60.7633C70.0357 60.363 69.3314 60.1493 68.6109 60.1493ZM68.6109 65.0065C68.3708 65.0065 68.136 64.9353 67.9363 64.8018C67.7366 64.6684 67.581 64.4788 67.4891 64.2569C67.3972 64.035 67.3731 63.7908 67.42 63.5553C67.4668 63.3198 67.5825 63.1034 67.7523 62.9336C67.9221 62.7637 68.1385 62.6481 68.374 62.6012C68.6096 62.5544 68.8537 62.5784 69.0756 62.6703C69.2975 62.7623 69.4872 62.9179 69.6206 63.1176C69.754 63.3173 69.8252 63.552 69.8252 63.7922C69.8252 64.1142 69.6973 64.4231 69.4696 64.6508C69.2419 64.8786 68.933 65.0065 68.6109 65.0065ZM68.6109 46.7922C67.86 46.7944 67.1281 47.0291 66.5159 47.4639C65.9036 47.8988 65.441 48.5125 65.1915 49.2208H57.6824V51.6493H65.1915C65.4152 52.2773 65.8072 52.8318 66.3247 53.252C66.8422 53.6723 67.4653 53.9423 68.1258 54.0324C68.7863 54.1225 69.4589 54.0293 70.0701 53.7631C70.6812 53.4968 71.2074 53.0676 71.5912 52.5225C71.975 51.9774 72.2015 51.3373 72.2461 50.6721C72.2907 50.007 72.1515 49.3424 71.8439 48.7509C71.5363 48.1595 71.0721 47.664 70.5019 47.3185C69.9317 46.9731 69.2776 46.791 68.6109 46.7922ZM68.6109 51.6493C68.3708 51.6493 68.136 51.5781 67.9363 51.4447C67.7366 51.3113 67.581 51.1216 67.4891 50.8997C67.3972 50.6779 67.3731 50.4337 67.42 50.1982C67.4668 49.9626 67.5825 49.7462 67.7523 49.5764C67.9221 49.4066 68.1385 49.291 68.374 49.2441C68.6096 49.1972 68.8537 49.2213 69.0756 49.3132C69.2975 49.4051 69.4872 49.5607 69.6206 49.7604C69.754 49.9601 69.8252 50.1949 69.8252 50.4351C69.8252 50.7571 69.6973 51.066 69.4696 51.2937C69.2419 51.5214 68.933 51.6493 68.6109 51.6493ZM68.6109 33.4351C67.6451 33.436 66.7191 33.8201 66.0361 34.5031C65.3532 35.1861 64.9691 36.1121 64.9681 37.0779C64.9722 37.6596 65.1172 38.2317 65.3907 38.7451L60.8347 43.1493H57.6824V45.5779H61.8158L67.1587 40.4148C67.655 40.6312 68.1933 40.7342 68.7345 40.7164C69.2756 40.6985 69.806 40.5602 70.2869 40.3115C70.7679 40.0628 71.1873 39.71 71.5147 39.2787C71.8421 38.8475 72.0693 38.3486 72.1796 37.8185C72.2899 37.2884 72.2806 36.7404 72.1523 36.2144C72.0241 35.6883 71.7802 35.1975 71.4384 34.7776C71.0965 34.3577 70.6654 34.0193 70.1763 33.7871C69.6871 33.5548 69.1524 33.4346 68.6109 33.4351ZM68.6109 38.2922C68.3708 38.2922 68.136 38.221 67.9363 38.0876C67.7366 37.9541 67.581 37.7645 67.4891 37.5426C67.3972 37.3207 67.3731 37.0766 67.42 36.841C67.4668 36.6055 67.5825 36.3891 67.7523 36.2193C67.9221 36.0495 68.1385 35.9338 68.374 35.887C68.6096 35.8401 68.8537 35.8642 69.0756 35.9561C69.2975 36.048 69.4872 36.2036 69.6206 36.4033C69.754 36.603 69.8252 36.8378 69.8252 37.0779C69.8252 37.4 69.6973 37.7088 69.4696 37.9365C69.2419 38.1643 68.933 38.2922 68.6109 38.2922Z"
               fill="#0F1014"
@@ -58,9 +66,9 @@ export default function Course() {
             width="109.215"
             height="108.089"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -98,10 +106,12 @@ export default function Course() {
       </svg>
 
       <div className={styles.course__characteristics}>
-        <div className={styles.course__characteristics_price}>1000 руб.</div>
+        <div className={styles.course__characteristics_price}>
+          {data.price} руб.
+        </div>
         <div className={styles.course__characteristics_rating}>
           <div className={styles.course__characteristics_rating_estimation}>
-            4,7
+            {data.rating}
           </div>
           <svg
             className={styles.course__characteristics_rating_star}
@@ -117,7 +127,9 @@ export default function Course() {
             />
           </svg>
         </div>
-        <div className={styles.course__characteristics_time}>23 часа</div>
+        <div className={styles.course__characteristics_time}>
+          {data.time} ч.
+        </div>
       </div>
 
       <svg
@@ -131,17 +143,15 @@ export default function Course() {
         <path
           d="M0.997314 1.05566L391.718 1.0557"
           stroke="#646775"
-          stroke-linecap="round"
-          stroke-dasharray="2 2"
+          strokeLinecap="round"
+          strokeDasharray="2 2"
         />
       </svg>
 
       <div className={styles.course__text}>
-        <div className={styles.course__text_title}>Изучите C#</div>
+        <div className={styles.course__text_title}>{data.title}</div>
         <div className={styles.course__text_declaration}>
-          Изучите популярный язык программирования C# от Microsoft, который
-          используется для создания веб-сайтов, мобильных приложений и многого
-          другого.
+          {data.description}
         </div>
       </div>
     </div>

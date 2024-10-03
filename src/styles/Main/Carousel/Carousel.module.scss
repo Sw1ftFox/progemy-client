@@ -9,13 +9,16 @@
   &__slider {
     margin-top: 5vw;
 
+    position: relative;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    user-select: none;
   }
 
-  &__slider_ArrowLeft {
+  &__slider_ArrowLeft,
+  &__slider_ArrowRight {
     width: 10%;
     cursor: pointer;
   }
@@ -25,9 +28,17 @@
   }
 
   &__slider_ArrowRight {
-    width: 10%;
-    cursor: pointer;
     transform: rotate(180deg);
+  }
+
+  &__slider_ArrowLeft path,
+  &__slider_ArrowRight path {
+    transition: 0.5s;
+  }
+
+  &__slider_ArrowLeft:hover path,
+  &__slider_ArrowRight:hover path {
+    stroke: var(--accent-color);
   }
 
   &__dots {
@@ -46,5 +57,9 @@
 
   &__dots_HollowCircle {
     cursor: pointer;
+  }
+
+  &__dots_HollowCircle:hover {
+    fill: var(--accent-color);
   }
 }
