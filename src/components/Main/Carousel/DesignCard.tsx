@@ -1,57 +1,22 @@
 import React from "react";
 const styles = require("../../../styles/Main/Carousel/Design.module.scss");
 const imageSrc = require("../../../../assets/svg/carousel/designCard/Picture.png");
+import cornerSrc from "../../../../assets/svg/carousel/designCard/Corner.svg";
 
 interface SlideProps {
   isActive: boolean;
 }
 
-export default function DesignCard({isActive} : SlideProps) {
+export default function DesignCard({ isActive }: SlideProps) {
   return (
-    <div className={`${styles.slide} ${isActive ? styles.slide__active : ''}`}>
+    <div className={`${styles.slide} ${isActive ? styles.slide__active : ""}`}>
       <div className={styles.slide__top}>
-        <svg
-          className={styles.slide__top_firstCorner}
-          width="122"
-          height="121"
-          viewBox="0 0 122 121"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M4 1.5H120"
-            stroke="#BB8E8E"
-            strokeWidth="3"
-            strokeLinecap="round"
-          />
-          <path
-            d="M2 3.5L1.99999 119.5"
-            stroke="#BB8E8E"
-            strokeWidth="3"
-            strokeLinecap="round"
-          />
-        </svg>
-        <svg
+        <img src={cornerSrc} className={styles.slide__top_firstCorner} alt="" />
+        <img
+          src={cornerSrc}
           className={styles.slide__top_secondCorner}
-          width="122"
-          height="121"
-          viewBox="0 0 122 121"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M4 1.5H120"
-            stroke="#BB8E8E"
-            strokeWidth="3"
-            strokeLinecap="round"
-          />
-          <path
-            d="M2 3.5L1.99999 119.5"
-            stroke="#BB8E8E"
-            strokeWidth="3"
-            strokeLinecap="round"
-          />
-        </svg>
+          alt=""
+        />
       </div>
 
       <div className={styles.slide__main}>
@@ -74,48 +39,16 @@ export default function DesignCard({isActive} : SlideProps) {
       </div>
 
       <div className={styles.slide__bottom}>
-        <svg
+        <img
+          src={cornerSrc}
           className={styles.slide__bottom_thirdCorner}
-          width="122"
-          height="121"
-          viewBox="0 0 122 121"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M4 1.5H120"
-            stroke="#BB8E8E"
-            strokeWidth="3"
-            strokeLinecap="round"
-          />
-          <path
-            d="M2 3.5L1.99999 119.5"
-            stroke="#BB8E8E"
-            strokeWidth="3"
-            strokeLinecap="round"
-          />
-        </svg>
-        <svg
+          alt=""
+        />
+        <img
+          src={cornerSrc}
           className={styles.slide__bottom_fourthCorner}
-          width="122"
-          height="121"
-          viewBox="0 0 122 121"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M4 1.5H120"
-            stroke="#BB8E8E"
-            strokeWidth="3"
-            strokeLinecap="round"
-          />
-          <path
-            d="M2 3.5L1.99999 119.5"
-            stroke="#BB8E8E"
-            strokeWidth="3"
-            strokeLinecap="round"
-          />
-        </svg>
+          alt=""
+        />
       </div>
     </div>
   );

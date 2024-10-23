@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import ProgCard from "./ProgCard";
 import DesignCard from "./DesignCard";
 import SecurityCard from "./SecurityCard";
+import Arrow from "../../SvgIcons/Main/Carousel/Arrow";
+import Circle from "../../SvgIcons/Main/Carousel/Circle";
 const styles = require("../../../styles/Main/Carousel/Carousel.module.scss");
 
-export default function Сarousel() {
+export default function Carousel() {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const [autoPlayInterval, setAutoPlayInterval] =
     useState<NodeJS.Timeout | null>(null);
@@ -62,28 +64,10 @@ export default function Сarousel() {
   return (
     <div className={styles.carousel}>
       <div className={styles.carousel__slider}>
-        <svg
+        <Arrow
           className={styles.carousel__slider_ArrowLeft}
           onClick={handlePreviousSlide}
-          width="71"
-          height="244"
-          viewBox="0 0 71 244"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M69 242L2 122"
-            stroke="white"
-            strokeWidth="3"
-            strokeLinecap="round"
-          />
-          <path
-            d="M69 2L2 122"
-            stroke="white"
-            strokeWidth="3"
-            strokeLinecap="round"
-          />
-        </svg>
+        />
 
         {currentSlideIndex === 0 ? (
           <ProgCard isActive={true} />
@@ -101,33 +85,15 @@ export default function Сarousel() {
           <SecurityCard isActive={false} />
         )}
 
-        <svg
+        <Arrow
           className={styles.carousel__slider_ArrowRight}
           onClick={handleNextSlide}
-          width="71"
-          height="244"
-          viewBox="0 0 71 244"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M69 242L2 122"
-            stroke="white"
-            strokeWidth="3"
-            strokeLinecap="round"
-          />
-          <path
-            d="M69 2L2 122"
-            stroke="white"
-            strokeWidth="3"
-            strokeLinecap="round"
-          />
-        </svg>
+        />
       </div>
 
       <div className={styles.carousel__dots}>
         {[0, 1, 2].map((index) => (
-          <svg
+          <Circle
             key={index}
             className={`${styles.carousel__dots_HollowCircle} ${
               currentSlideIndex === index
@@ -135,20 +101,7 @@ export default function Сarousel() {
                 : ""
             }`}
             onClick={() => handleGoToSlide(index)}
-            width="31"
-            height="31"
-            viewBox="0 0 31 31"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle
-              cx="15.5"
-              cy="15.5"
-              r="14"
-              stroke="#7CFFD8"
-              strokeWidth="3"
-            />
-          </svg>
+          />
         ))}
       </div>
     </div>

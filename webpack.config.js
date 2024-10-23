@@ -59,7 +59,6 @@ module.exports = (env) => {
             "sass-loader",
           ],
         },
-
         {
           test: /\.(png|svg|jpg|jpeg|gif)$/i,
           type: "asset/resource",
@@ -67,6 +66,13 @@ module.exports = (env) => {
         {
           test: /\.(woff|woff2|eot|ttf|otf)$/i,
           type: "asset/resource",
+        },
+        {
+          test: /\.svg$/,
+          type: "asset/resource",
+          generator: {
+            filename: "assets/[hash][ext][query]",
+          },
         },
       ],
     },

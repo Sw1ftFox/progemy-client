@@ -45,7 +45,7 @@ export const coursesData: ItemData[] = [
     price: "2100",
     rating: "5.0",
     time: "124",
-    title: "Изучите Accembler",
+    title: "Изучите Assembler",
     description: "Описание 4",
   },
   {
@@ -78,7 +78,7 @@ export const coursesData: ItemData[] = [
     price: "2100",
     rating: "5.0",
     time: "124",
-    title: "Изучите Accembler",
+    title: "Изучите Assembler",
     description: "Описание 4",
   },
 ];
@@ -114,7 +114,7 @@ export const popularCoursesData: ItemData[] = [
     price: "2100",
     rating: "5.0",
     time: "124",
-    title: "Изучите Accembler",
+    title: "Изучите Assembler",
     description: "Описание 4",
   },
 ]

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Course from "../PopularCourses/Course";
 const styles = require("../../../styles/Main/Catalog/Catalog.module.scss");
 import { coursesData } from "../../../data";
+import arrowSrc from "../../../../assets/svg/catalog/arrow.svg";
 
 const getCourseCountText = (count: number) => {
   const lastDigit = count % 10;
@@ -41,7 +42,7 @@ export default function Catalog() {
   };
 
   const toggleActive = () => {
-    setIsActive(!isActive); 
+    setIsActive(!isActive);
   };
 
   return (
@@ -58,24 +59,13 @@ export default function Catalog() {
             }}
           >
             Сортировать по
-            <svg
+            <img
+              src={arrowSrc}
               className={`${styles.main__sort_container_button_arrow} ${
                 isActive ? styles.main__sort_container_button_arrow_active : ""
               }`}
-              width="27"
-              height="13"
-              viewBox="0 0 27 13"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 1L13.5 12L26 1"
-                stroke="#CFD3DA"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+              alt=""
+            />
           </button>
           <ul
             className={`${styles.main__sort_container_options} ${
