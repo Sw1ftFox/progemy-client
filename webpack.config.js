@@ -55,7 +55,6 @@ module.exports = (env) => {
                 modules: true,
               },
             },
-            ,
             "sass-loader",
           ],
         },

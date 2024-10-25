@@ -1,0 +1,1 @@
+export {Сarousel} from "./ui/Сarousel"
