@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Arrow from "../../../icons/carousel/Arrow";
 import Circle from "../../../icons/carousel/Circle";
 const styles = require("./Carousel.module.scss");
-import { slidesArray, slidesProps } from "../../../entities/slidesData";
+import { slidesArray } from "../../../entities/slidesData";
 
 export const Сarousel = () => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
@@ -67,7 +67,12 @@ export const Сarousel = () => {
           onClick={handlePreviousSlide}
         />
 
-        {React.createElement(slidesArray[currentSlideIndex], slidesProps)}
+        {slidesArray.map((SlideComponent, index) => (
+          <SlideComponent
+            key={index}
+            isActive={currentSlideIndex === index}
+          />
+        ))}
 
         <Arrow
           className={styles.carousel__slider_ArrowRight}

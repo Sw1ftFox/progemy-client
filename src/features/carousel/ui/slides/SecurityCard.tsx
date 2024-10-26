@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Corner from "../../../../icons/carousel/Corner";
 import Ellipse from "../../../../icons/carousel/Ellipse";
 const styles = require("./Security.module.scss");
@@ -9,8 +9,18 @@ interface SlideProps {
 }
 
 export const SecurityCard = ({ isActive }: SlideProps) => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    if (isActive) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  }, [isActive]);
+
   return (
-    <div className={`${styles.slide} ${isActive ? styles.slide__active : ""}`}>
+    <div className={`${styles.slide} ${isVisible ? styles.slide__active : ""}`}>
       <div className={styles.slide__top}>
         <Corner className={styles.slide__top_firstCorner} />
 

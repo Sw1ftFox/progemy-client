@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 const styles = require("./Design.module.scss");
 const imageSrc = require("../../../../assets/icons/carousel/designCard/Picture.png");
 import cornerSrc from "../../../../assets/icons/carousel/designCard/Corner.svg";
@@ -8,8 +8,18 @@ interface SlideProps {
 }
 
 export const DesignCard = ({ isActive }: SlideProps) => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    if (isActive) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  }, [isActive]);
+
   return (
-    <div className={`${styles.slide} ${isActive ? styles.slide__active : ""}`}>
+    <div className={`${styles.slide} ${isVisible ? styles.slide__active : ""}`}>
       <div className={styles.slide__top}>
         <img src={cornerSrc} className={styles.slide__top_firstCorner} alt="" />
         <img
@@ -52,4 +62,4 @@ export const DesignCard = ({ isActive }: SlideProps) => {
       </div>
     </div>
   );
-}
+};

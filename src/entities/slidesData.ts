@@ -5,7 +5,3 @@ import { SecurityCard } from "../features/carousel/index";
 export const slidesArray = [
   ProgCard, DesignCard, SecurityCard
 ]
-
-export const slidesProps = {
-  isActive: true
-}
