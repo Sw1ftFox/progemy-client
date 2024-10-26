@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from "react";
-import {ProgCard} from "./slides/progCard/ui/ProgCard";
-import {DesignCard} from "./slides/designCard/ui/DesignCard";
-import {SecurityCard} from "./slides/securityCard/ui/SecurityCard";
 import Arrow from "../../../icons/carousel/Arrow";
 import Circle from "../../../icons/carousel/Circle";
 const styles = require("./Carousel.module.scss");
+import { slidesArray, slidesProps } from "../../../entities/slidesData";
 
 export const Сarousel = () => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const [autoPlayInterval, setAutoPlayInterval] =
     useState<NodeJS.Timeout | null>(null);
-  const totalSlides = 3;
+  const totalSlides = slidesArray.length;
 
   const pauseAutoPlay = () => {
     if (autoPlayInterval) {
@@ -69,9 +67,7 @@ export const Сarousel = () => {
           onClick={handlePreviousSlide}
         />
 
-        {<ProgCard isActive={currentSlideIndex === 0} />}
-        {<DesignCard isActive={currentSlideIndex === 1} />}
-        {<SecurityCard isActive={currentSlideIndex === 2} />}
+        {React.createElement(slidesArray[currentSlideIndex], slidesProps)}
 
         <Arrow
           className={styles.carousel__slider_ArrowRight}
@@ -94,4 +90,4 @@ export const Сarousel = () => {
       </div>
     </div>
   );
-}
+};

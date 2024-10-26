@@ -1,8 +1,8 @@
 import React from "react";
-import Corner from "../../../../../../icons/carousel/Corner";
-import Ellipse from "../../../../../../icons/carousel/Ellipse";
+import Corner from "../../../../icons/carousel/Corner";
+import Ellipse from "../../../../icons/carousel/Ellipse";
 const styles = require("./Security.module.scss");
-const imageSrc = require("../../../../../../assets/icons/carousel/infosecurityCard/Picture.png");
+const imageSrc = require("../../../../assets/icons/carousel/infosecurityCard/Picture.png");
 
 interface SlideProps {
   isActive: boolean;

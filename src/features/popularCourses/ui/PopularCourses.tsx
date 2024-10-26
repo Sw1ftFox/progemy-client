@@ -1,7 +1,7 @@
 import React from "react";
 import {Course} from "../../../shared/course/ui/Course";
 const styles = require("./PopularCourses.module.scss");
-import { popularCoursesData } from "../../../entities/data";
+import { popularCoursesData } from "../../../entities/coursesData";
 
 export const PopularCourses = () => {
   return (

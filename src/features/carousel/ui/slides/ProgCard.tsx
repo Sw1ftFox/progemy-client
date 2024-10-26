@@ -1,12 +1,12 @@
 import React from "react";
 const styles = require("./ProgCard.module.scss");
-const imageSrc = require("../../../../../../assets/icons/carousel/programmingCard/Picture.png");
-import cornerSrc from "../../../../../../assets/icons/carousel/programmingCard/Corner.svg";
-import lineSrc from "../../../../../../assets/icons/carousel/programmingCard/Line.svg";
-import cPlusSrc from "../../../../../../assets/icons/carousel/programmingCard/C++.svg";
-import goSrc from "../../../../../../assets/icons/carousel/programmingCard/Go.svg";
-import jsSrc from "../../../../../../assets/icons/carousel/programmingCard/JS.svg";
-import pythonSrc from "../../../../../../assets/icons/carousel/programmingCard/Python.svg";
+const imageSrc = require("../../../../assets/icons/carousel/programmingCard/Picture.png");
+import cornerSrc from "../../../../assets/icons/carousel/programmingCard/Corner.svg";
+import lineSrc from "../../../../assets/icons/carousel/programmingCard/Line.svg";
+import cPlusSrc from "../../../../assets/icons/carousel/programmingCard/C++.svg";
+import goSrc from "../../../../assets/icons/carousel/programmingCard/Go.svg";
+import jsSrc from "../../../../assets/icons/carousel/programmingCard/JS.svg";
+import pythonSrc from "../../../../assets/icons/carousel/programmingCard/Python.svg";
 
 interface SlideProps {
   isActive: boolean;

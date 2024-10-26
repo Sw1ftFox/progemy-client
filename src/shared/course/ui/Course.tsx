@@ -1,29 +1,29 @@
 import React from "react";
 const styles = require("./Course.module.scss");
-import { ItemData } from "../../../entities/data";
+import { CoursesData } from "../../../entities/coursesData";
 import CourseIcon from "../../../icons/popularCourses/CourseIcon";
 import ratingStarSrc from "../../../assets/icons/course/star.svg";
 import lineSrc from "../../../assets/icons/course/Line.svg";
 
-// const backgroundImages: { [key: string]: string } = {
-//   programming: require("/assets/img/course/programming.png"),
-//   design: require("/assets/img/course/design.png"),
-//   security: require("/assets/img/course/security.png"),
-// };
+const colorSvg: { [key: string]: string } = {
+  programming: require("../../../assets/icons/course/bgcourse3.svg"),
+  design: require("../../../assets/icons/course/bgcourse2.svg"),
+  security: require("../../../assets/icons/course/bgcourse4.svg"),
+};
 
 interface CourseProps {
-  data: ItemData;
+  data: CoursesData;
 }
 
 export const Course = ({ data }: CourseProps) => {
-  // const background =
-  //   backgroundImages[data.area] ||
-  //   require("/assets/img/course/programming.png");
+  const color = colorSvg[data.area] || require("../../../assets/icons/course/bgcourse1.svg");
 
   return (
     <div
       className={styles.course}
-      // style={{ backgroundImage: `url(${background})` }}
+      style={{
+        backgroundImage: `url(${color})`,
+      }}
     >
       <CourseIcon className={styles.course__icon} />
 
@@ -56,4 +56,4 @@ export const Course = ({ data }: CourseProps) => {
       </div>
     </div>
   );
-}
+};

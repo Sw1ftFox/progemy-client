@@ -1,7 +1,7 @@
 import React from "react";
 import {Author} from "./author/ui/Author";
 const styles = require("./BestAuthors.module.scss");
-import { authorsData } from "../../../entities/data";
+import { authorsData } from "../../../entities/authorsData";
 import lineSrc from '../../../assets/icons/bestauthor/Line.svg';
 
 export const BestAuthors = () => {

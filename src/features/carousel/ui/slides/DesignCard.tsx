@@ -1,7 +1,7 @@
 import React from "react";
 const styles = require("./Design.module.scss");
-const imageSrc = require("../../../../../../assets/icons/carousel/designCard/Picture.png");
-import cornerSrc from "../../../../../../assets/icons/carousel/designCard/Corner.svg";
+const imageSrc = require("../../../../assets/icons/carousel/designCard/Picture.png");
+import cornerSrc from "../../../../assets/icons/carousel/designCard/Corner.svg";
 
 interface SlideProps {
   isActive: boolean;

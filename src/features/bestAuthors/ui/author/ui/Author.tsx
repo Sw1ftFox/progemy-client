@@ -1,6 +1,6 @@
 import React from "react";
 const styles = require("./Author.module.scss");
-import { AuthorsData } from "../../../../../entities/data";
+import { AuthorsData } from "../../../../../entities/authorsData";
 
 interface AuthorsProps {
   data: AuthorsData;

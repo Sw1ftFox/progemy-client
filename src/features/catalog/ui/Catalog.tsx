@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import {Course} from "../../../shared/course/ui/Course";
+import { Course } from "../../../shared/course/ui/Course";
 const styles = require("./Catalog.module.scss");
-import { coursesData } from "../../../entities/data";
+import { coursesData } from "../../../entities/coursesData";
 import arrowSrc from "../../../assets/icons/catalog/arrow.svg";
 import { getCourseCountText } from "../../../helpers/helpers";
 import { Link } from "react-router-dom";
@@ -93,11 +93,10 @@ export const Catalog = () => {
             return <Course key={index} data={item} />;
           }
         })}
-
       </div>
       <Link className={styles.main__link} to={"/catalog"}>
-          Смотреть далее...
-        </Link>
+        Смотреть далее...
+      </Link>
     </div>
   );
-}
+};

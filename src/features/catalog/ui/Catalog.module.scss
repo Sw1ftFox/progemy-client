@@ -114,20 +114,32 @@
   &__link {
     margin: 0 auto 0 auto;
     text-decoration: none;
-    
     font-family: var(--isocpeur-font);
-    font-size: 1vw;
-    border-radius: 5px;
-    padding: 10px;
-    background-color: var(--accent-color);
-    color: var(--darkGrey-color);
+    font-size: 1.5vw;
+    color: var(--accent-color);
 
+    position: relative;
     transition: 0.5s;
+  }
+
+  &__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1.5px;
+    background-color: var(--accent-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
   }
 
   &__link:hover {
     color: var(--accent-color);
-    background-color: var(--darkGrey-color);
-    border-radius: 0;
+
+    &::after {
+      left: 0;
+      transform: scaleX(1);
+    }
   }
 }
