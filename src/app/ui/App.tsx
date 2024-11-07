@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HomePage } from "../../pages/homePage";
-import {Registration} from "../../pages/registration/ui/Registration";
-import {Authorization} from "../../pages/authorization/ui/Authorization";
+import { Registration } from "../../pages/registration/ui/Registration";
+import { Authorization } from "../../pages/authorization/ui/Authorization";
 
 const App = () => (
   <BrowserRouter>
