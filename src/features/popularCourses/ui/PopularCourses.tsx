@@ -1,5 +1,5 @@
 import React from "react";
-import {Course} from "../../../shared/course/ui/Course";
+import { Course } from "../../../shared/course/index";
 const styles = require("./PopularCourses.module.scss");
 import { popularCoursesData } from "../../../entities/coursesData";
 
@@ -14,4 +14,4 @@ export const PopularCourses = () => {
       </div>
     </div>
   );
-}
+};

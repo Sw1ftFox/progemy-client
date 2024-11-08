@@ -98,8 +98,16 @@
   }
 }
 
-@media (width <= 1300px) {
+@media (width <= 1200px) {
   .slide {
+    height: 52vw;
     margin-top: 5%;
+
+    &__top_firstCorner,
+    &__top_secondCorner,
+    &__bottom_thirdCorner,
+    &__bottom_fourthCorner {
+      width: 10%;
+    }
   }
 }

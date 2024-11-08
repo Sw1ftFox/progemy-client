@@ -23,3 +23,11 @@
     color: var(--accent-color);
   }
 }
+
+@media (width < 600px) {
+  .logo {
+    font-size: 3vw;
+    position: relative;
+    left: 1%;
+  }
+}

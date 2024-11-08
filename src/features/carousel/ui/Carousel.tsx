@@ -5,7 +5,7 @@ const styles = require("./Carousel.module.scss");
 import { slidesArray } from "../../../entities/slidesData";
 import useCarousel from "../../../services/useCarousel";
 
-export const Сarousel = () => {
+export const Carousel = () => {
   const totalSlides = slidesArray.length;
   const { previousSlide, nextSlide, goToSlide, currentSlideIndex } =
     useCarousel(5000, totalSlides);

@@ -1,8 +1,8 @@
 import React from "react";
-import {Author} from "./author/ui/Author";
+import { Author } from "../index";
 const styles = require("./BestAuthors.module.scss");
 import { authorsData } from "../../../entities/authorsData";
-import lineSrc from '../../../assets/icons/bestauthor/Line.svg';
+import lineSrc from "../../../assets/icons/bestauthor/Line.svg";
 
 export const BestAuthors = () => {
   return (
@@ -22,4 +22,4 @@ export const BestAuthors = () => {
       </div>
     </div>
   );
-}
+};

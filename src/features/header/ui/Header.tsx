@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Logo} from "../../../shared/logo/ui/Logo";
+import {Logo} from "../../../shared/logo/index";
 import { Link } from "react-router-dom";
 const styles = require("./Header.module.scss");
 import dividerSrc from "../../../assets/icons/header/verticalLine.svg";

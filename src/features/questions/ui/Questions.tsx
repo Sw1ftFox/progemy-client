@@ -1,5 +1,5 @@
 import React from "react";
-import {Question} from "./question/ui/Question";
+import { Question } from "../index";
 const styles = require("./Questions.module.scss");
 
 export const Questions = () => {
@@ -18,4 +18,4 @@ export const Questions = () => {
       </div>
     </div>
   );
-}
+};

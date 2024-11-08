@@ -74,8 +74,10 @@
   }
 
   &__searchIcon {
-    width: 2vw;
-    height: 2vw;
+    width: 2.1vw;
+    height: 2.2vw;
+    position: relative;
+    top: 2px;
   }
 
   &__searchIcon:hover {
@@ -87,7 +89,7 @@
     text-indent: 4vw;
 
     border: 1px solid #7cffd8;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 27vw;
     height: 3.5vw;
 
@@ -124,7 +126,7 @@
     color: var(--darkGrey-color);
     background-color: var(--accent-color);
     text-align: center;
-    border-radius: 5px;
+    border-radius: 3px;
     width: 10vw;
     padding: 3% 0;
   }
@@ -133,5 +135,69 @@
     color: var(--white-color);
     background-color: transparent;
     border: none;
+  }
+}
+
+@media (width < 600px) {
+  .header {
+    height: 14vw;
+
+    &__divider {
+      width: 8%;
+    }
+
+    &__catalog,
+    &__resources {
+      width: 14%;
+      justify-content: space-around;
+      position: relative;
+      right: 2%;
+    }
+
+    &__resources {
+      left: 0.5%;
+    }
+
+    &__catalogText,
+    &__resourcesText {
+      font-size: 3vw;
+    }
+
+    &__catalogDropdown,
+    &__resourcesDropdown {
+      height: 15%;
+      width: 15%;
+    }
+
+    &__catalogDropdown {
+      left: 3px;
+    }
+
+    &__search {
+      width: 27%;
+      margin-right: 4%;
+    }
+
+    &__searchInput {
+      font-size: 2.2vw;
+      height: 4vw;
+    }
+
+    &__searchIcon {
+      width: 2.5vw;
+      height: 2.8vw;
+      left: 3px;
+      top: 1.5px;
+    }
+
+    &__buttonsLogin,
+    &__buttonsSignup {
+      font-size: 2.2vw;
+    }
+
+    &__buttonsSignup {
+      width: 12vw;
+      margin-right: 3px;
+    }
   }
 }

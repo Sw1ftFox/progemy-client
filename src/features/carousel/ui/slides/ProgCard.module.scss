@@ -27,6 +27,7 @@
 
   &__top_Line {
     width: 60%;
+    height: 5vw;
     margin-left: 2%;
   }
 
@@ -111,6 +112,20 @@
 
 @media (width <= 1200px) {
   .slide {
+    height: 52vw;
     margin-top: 5%;
+
+    &__top_firstCorner,
+    &__top_secondCorner,
+    &__bottom_thirdCorner,
+    &__bottom_fourthCorner {
+      width: 10%;
+    }
+
+    &__bottom_signature {
+      text-align: center;
+      width: 100%;
+      font-size: 2vw;
+    }
   }
 }

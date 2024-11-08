@@ -24,7 +24,7 @@
   &__community_socnetwork_title {
     font-family: var(--isocpeur-font), sans-serif;
     font-weight: 400;
-    font-size: 2vw;
+    font-size: 2.5vw;
     color: var(--white-color);
   }
 
@@ -47,6 +47,7 @@
 
   &__firstLine {
     width: 94%;
+    height: 2px;
     margin: 0 auto 3% auto;
   }
 
@@ -79,7 +80,7 @@
   &__info_knowledge_title,
   &__info_services_title,
   &__info_support_title {
-    font-size: 1.5vw;
+    font-size: 2.2vw;
     font-weight: 600;
     color: var(--white-color);
   }
@@ -87,7 +88,7 @@
   &__info_knowledge_text,
   &__info_services_text,
   &__info_support_text {
-    font-size: 1.3vw;
+    font-size: 2vw;
     font-weight: 400;
     cursor: pointer;
     color: var(--lightGrey-color);
@@ -102,6 +103,7 @@
 
   &__secondLine {
     width: 94%;
+    height: 2px;
     margin: 0 auto 1% auto;
   }
 
@@ -114,7 +116,7 @@
     color: var(--white-color);
     font-family: var(--isocpeur-font), sans-serif;
     font-weight: 400;
-    font-size: 1.3vw;
+    font-size: 2vw;
     line-height: 150%;
   }
 

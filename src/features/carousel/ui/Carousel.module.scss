@@ -61,3 +61,22 @@
     fill: var(--accent-color);
   }
 }
+
+@media (width < 1000px) {
+  .carousel {
+
+    &__slider_ArrowLeft,
+    &__slider_ArrowRight {
+      width: 5%;
+    }
+
+    &__dots {
+      justify-content: space-between;
+      width: 25%;
+    }
+
+    &__dots_HollowCircle {
+      width: 10%;
+    }
+  }
+}

@@ -40,7 +40,7 @@
     font-size: 1.5vw;
     line-height: 117%;
     color: var(--white-color);
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid var(--accent-color);
     background-color: var(--darkBlue-color);
     transition: 0.5s;
@@ -48,7 +48,7 @@
   }
 
   &__sort_container_button_active {
-    border-radius: 10px 10px 0 0;
+    border-radius: 5px 5px 0 0;
     border: 1px solid var(--accent-color);
   }
 
@@ -64,11 +64,13 @@
   &__sort_container_options {
     display: none;
     position: absolute;
+    z-index: 10;
     width: 100%;
 
     border-radius: 0 0 10px 10px;
     list-style: none;
     background-color: var(--darkBlue-color);
+
   }
 
   &__sort_container_options_active {
@@ -106,9 +108,12 @@
 
   &__courses {
     width: 90%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     margin: 3% auto 0 auto;
+
+    position: relative;
+    z-index: 1;
   }
 
   &__link {

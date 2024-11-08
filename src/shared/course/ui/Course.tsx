@@ -16,7 +16,9 @@ interface CourseProps {
 }
 
 export const Course = ({ data }: CourseProps) => {
-  const color = colorSvg[data.area] || require("../../../assets/icons/course/bgcourse1.svg");
+  const color =
+    colorSvg[data.area] ||
+    require("../../../assets/icons/course/bgcourse1.svg");
 
   return (
     <div
