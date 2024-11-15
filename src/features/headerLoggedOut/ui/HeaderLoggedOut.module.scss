@@ -1,10 +1,4 @@
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 8vw;
-  background-color: var(--darkGrey-color);
-
   &__divider {
     border: 1px solid #3a3d43;
     width: 5vw;
@@ -13,49 +7,8 @@
     flex-shrink: 1;
   }
 
-  &__catalog,
-  &__resources {
-    width: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-  }
-
-  &__catalogText,
-  &__resourcesText {
-    font-family: var(--isocpeur-font), sans-serif;
-    color: var(--lightGrey-color);
-    font-size: 2.5vw;
-    transition: 0.5s;
-  }
-
-  &__catalog:hover &__catalogText,
-  &__resources:hover &__resourcesText {
-    color: var(--accent-color);
-  }
-
-  &__catalogDropdown,
-  &__resourcesDropdown {
-    position: relative;
-    top: 3px;
-    height: 10%;
-    width: 10%;
-    transition: 0.5s;
-  }
-
-  &__catalogDropdown {
+  &__catalog__dropdown {
     left: 10px;
-  }
-
-  &__catalog:hover &__catalogDropdown,
-  &__resources:hover &__resourcesDropdown {
-    transform: rotate(180deg);
-  }
-
-  &__catalog:hover &__catalogDropdown path,
-  &__resources:hover &__resourcesDropdown path {
-    stroke: var(--accent-color);
   }
 
   &__search {
@@ -63,7 +16,7 @@
     align-items: center;
   }
 
-  &__searchBtn {
+  &__search__btn {
     position: relative;
     left: 10%;
 
@@ -73,18 +26,18 @@
     cursor: pointer;
   }
 
-  &__searchIcon {
+  &__search__icon {
     width: 2.1vw;
     height: 2.2vw;
     position: relative;
     top: 2px;
   }
 
-  &__searchIcon:hover {
+  &__search__icon:hover {
     stroke: var(--white-color);
   }
 
-  &__searchInput {
+  &__search__input {
     font-size: 1.5vw;
     text-indent: 4vw;
 
@@ -103,8 +56,8 @@
     align-items: center;
   }
 
-  &__buttonsLogin,
-  &__buttonsSignup {
+  &__buttons__login,
+  &__buttons__signup {
     font-size: 1.6vw;
     font-family: var(--spacemono-font), sans-serif;
     text-decoration: none;
@@ -112,17 +65,17 @@
     transition: 0.5s;
   }
 
-  &__buttonsLogin {
+  &__buttons__login {
     margin-right: 1vw;
 
     color: var(--white-color);
   }
 
-  &__buttonsLogin:hover {
+  &__buttons__login:hover {
     color: var(--accent-color);
   }
 
-  &__buttonsSignup {
+  &__buttons__signup {
     color: var(--darkGrey-color);
     background-color: var(--accent-color);
     text-align: center;
@@ -131,7 +84,7 @@
     padding: 3% 0;
   }
 
-  &__buttonsSignup:hover {
+  &__buttons__signup:hover {
     color: var(--white-color);
     background-color: transparent;
     border: none;
@@ -140,8 +93,6 @@
 
 @media (width < 600px) {
   .header {
-    height: 14vw;
-
     &__divider {
       width: 8%;
     }
@@ -158,18 +109,13 @@
       left: 0.5%;
     }
 
-    &__catalogText,
-    &__resourcesText {
-      font-size: 3vw;
-    }
-
-    &__catalogDropdown,
-    &__resourcesDropdown {
+    &__catalog__dropdown,
+    &__resources__dropdown {
       height: 15%;
       width: 15%;
     }
 
-    &__catalogDropdown {
+    &__catalog__dropdown {
       left: 3px;
     }
 
@@ -178,24 +124,24 @@
       margin-right: 4%;
     }
 
-    &__searchInput {
+    &__search__input {
       font-size: 2.2vw;
       height: 4vw;
     }
 
-    &__searchIcon {
+    &__search__icon {
       width: 2.5vw;
       height: 2.8vw;
       left: 3px;
       top: 1.5px;
     }
 
-    &__buttonsLogin,
-    &__buttonsSignup {
+    &__buttons__login,
+    &__buttons__signup {
       font-size: 2.2vw;
     }
 
-    &__buttonsSignup {
+    &__buttons__signup {
       width: 12vw;
       margin-right: 3px;
     }

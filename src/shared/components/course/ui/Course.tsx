@@ -1,14 +1,14 @@
 import React from "react";
 const styles = require("./Course.module.scss");
-import { CoursesData } from "../../../entities/coursesData";
-import CourseIcon from "../../../icons/popularCourses/CourseIcon";
-import ratingStarSrc from "../../../assets/icons/course/star.svg";
-import lineSrc from "../../../assets/icons/course/Line.svg";
+import { CoursesData } from "../../../../entities/coursesData";
+import CourseIcon from "../../../../icons/popularCourses/CourseIcon";
+import ratingStarSrc from "../../../../assets/icons/course/star.svg";
+import lineSrc from "../../../../assets/icons/course/Line.svg";
 
 const colorSvg: { [key: string]: string } = {
-  programming: require("../../../assets/icons/course/bgcourse3.svg"),
-  design: require("../../../assets/icons/course/bgcourse2.svg"),
-  security: require("../../../assets/icons/course/bgcourse4.svg"),
+  programming: require("../../../../assets/icons/course/bgcourse3.svg"),
+  design: require("../../../../assets/icons/course/bgcourse2.svg"),
+  security: require("../../../../assets/icons/course/bgcourse4.svg"),
 };
 
 interface CourseProps {
@@ -18,7 +18,7 @@ interface CourseProps {
 export const Course = ({ data }: CourseProps) => {
   const color =
     colorSvg[data.area] ||
-    require("../../../assets/icons/course/bgcourse1.svg");
+    require("../../../../assets/icons/course/bgcourse1.svg");
 
   return (
     <div

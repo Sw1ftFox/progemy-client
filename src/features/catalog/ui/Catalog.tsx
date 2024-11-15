@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Course } from "../../../shared/course/index";
+import { Course } from "../../../shared/components/course/index";
 const styles = require("./Catalog.module.scss");
 import { coursesData } from "../../../entities/coursesData";
 import arrowSrc from "../../../assets/icons/catalog/arrow.svg";

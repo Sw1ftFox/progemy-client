@@ -1,0 +1,21 @@
+.courses {
+  width: 80%;
+  background: var(--black-color);
+  padding-bottom: 2%;
+  
+  &__title {
+    color: var(--white-color);
+    width: 30%;
+    font-weight: 700;
+    font-size: 3vw;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 2%;
+}
+
+  &__container {
+    margin-left: 2%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

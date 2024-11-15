@@ -1,0 +1,55 @@
+.menu {
+  width: 15%;
+
+  &__container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15%;
+    margin: 10% auto 10% auto;
+    border-radius: 25px;
+    background: var(--mediumGrey-color);
+  }
+
+  &__container__item {
+    width: 5vw;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
+    border-radius: 12px;
+    box-shadow: 6px 6px 19px 0 rgba(0, 0, 0, 0.5),
+      -6px -6px 19px 0 rgba(0, 0, 0, 0.5);
+    background: var(--mediumGrey-color);
+    cursor: pointer;
+  }
+
+  &__container__item:hover {
+    box-shadow: inset 4px 4px 6px 0 rgba(0, 0, 0, 0.5),
+      inset -6px -6px 6px 0 rgba(15, 16, 20, 0.5);
+  }
+
+  &__container__item__myCourses,
+  &__container__item__statistics,
+  &__container__item__achievements,
+  &__container__item__settings,
+  &__container__item__logout {
+    width: 50%;
+    height: 50%;
+  }
+
+  &__container__item:last-child {
+    margin-top: 60%;
+    margin-bottom: 20%;
+  }
+}
+
+@media (width < 500px) {
+  .menu {
+    &__container {
+      border-radius: 15px;
+    }
+  }
+}

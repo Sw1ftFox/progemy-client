@@ -1,20 +1,27 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const styles = require("./Registration.module.scss");
 import nickname from "../../../assets/icons/registration/nickname.svg";
 import email from "../../../assets/icons/registration/email.svg";
 import password from "../../../assets/icons/registration/password.svg";
 
 export const Registration = () => {
+  const navigate = useNavigate();
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const target = event.currentTarget;
 
-    const nickname = (target.elements.namedItem('nickname') as HTMLInputElement).value;
-    const email = (target.elements.namedItem('email') as HTMLInputElement).value;
-    const password = (target.elements.namedItem('password') as HTMLInputElement).value;
-    const passwordAgain = (target.elements.namedItem('passwordAgain') as HTMLInputElement).value;
+    const nickname = (target.elements.namedItem("nickname") as HTMLInputElement)
+      .value;
+    const email = (target.elements.namedItem("email") as HTMLInputElement)
+      .value;
+    const password = (target.elements.namedItem("password") as HTMLInputElement)
+      .value;
+    const passwordAgain = (
+      target.elements.namedItem("passwordAgain") as HTMLInputElement
+    ).value;
 
     //всякие проверки на совпадения и правильное написание
     if (password !== passwordAgain) {
@@ -22,10 +29,12 @@ export const Registration = () => {
       return;
     }
 
-    //если все условия выполнятся, то отправляем POST запрос и добавляем данные в БД 
+    //если все условия выполнятся, то отправляем POST запрос и добавляем данные в БД
 
-    alert("Регистрация пройдена успешно!")
-  }
+    alert("Регистрация пройдена успешно!");
+
+    navigate("/profile");
+  };
 
   return (
     <div className={styles.registration}>
@@ -102,7 +111,7 @@ export const Registration = () => {
             />
           </label>
           <div className={styles.registration__form__login}>
-            <Link className={styles.registration__form__login_link} to="">
+            <Link className={styles.registration__form__login_link} to="/authorization">
               Уже зарегистрированы?
             </Link>
           </div>

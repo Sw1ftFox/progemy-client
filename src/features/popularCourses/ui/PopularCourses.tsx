@@ -1,5 +1,5 @@
 import React from "react";
-import { Course } from "../../../shared/course/index";
+import { Course } from "../../../shared/components/course/index";
 const styles = require("./PopularCourses.module.scss");
 import { popularCoursesData } from "../../../entities/coursesData";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Header } from "../../../features/header/index";
+import { HeaderLoggedOut } from "../../../features/headerLoggedOut/index";
 import { Carousel } from "../../../features/carousel/index";
 import { PopularCourses } from "../../../features/popularCourses/index";
 import { BestAuthors } from "../../../features/bestAuthors/index";
@@ -10,7 +10,7 @@ import { Footer } from "../../../features/footer/index";
 export const HomePage = () => {
   return (
     <div>
-      <Header />
+      <HeaderLoggedOut />
       <Carousel />
       <PopularCourses />
       <BestAuthors />

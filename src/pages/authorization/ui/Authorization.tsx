@@ -2,20 +2,26 @@ import React from "react";
 const styles = require("./Authorization.module.scss");
 import nickname from "../../../assets/icons/authorization/nickname.svg";
 import password from "../../../assets/icons/authorization/password.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Authorization = () => {
+  const navigate = useNavigate();
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const target = event.currentTarget;
-    const nickname = (target.elements.namedItem("nickname") as HTMLInputElement).value;
-    const password = (target.elements.namedItem("password") as HTMLInputElement).value;
+    const nickname = (target.elements.namedItem("nickname") as HTMLInputElement)
+      .value;
+    const password = (target.elements.namedItem("password") as HTMLInputElement)
+      .value;
 
     //отправка данных (GET) на сервер в целях получения положительного или отрицательного ответа
 
     alert("Вы авторизованы!");
-  }
+
+    navigate("/profile");
+  };
 
   return (
     <div className={styles.authorization}>

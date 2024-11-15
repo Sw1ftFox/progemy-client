@@ -1,5 +1,5 @@
 import React from "react";
-import {Logo} from "../../../shared/logo/index";
+import {Logo} from "../../../shared/components/logo/index";
 import VkIcon from "../../../icons/footer/VkIcon";
 import TelegramIcon from "../../../icons/footer/TelegramIcon";
 import YoutubeIcon from "../../../icons/footer/YoutubeIcon";
