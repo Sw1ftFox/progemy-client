@@ -1,11 +1,11 @@
 import React from "react";
 const styles = require("./Profile.module.scss");
-import { HeaderLoggedIn } from "../../../features/headerLoggedIn/index";
-import { NavigationSidebar } from "../../../features/navigationSidebar/index";
-import { MyCourses } from "../../../features/myCourses/index";
-import { CoursesStatistics } from "../../../features/coursesStatistics";
-import { Footer } from "../../../features/footer";
-import { StatisticalScheme } from "../../../features/statisticalScheme";
+import { HeaderLoggedIn } from "../../../widgets/headerLoggedIn/index";
+import { NavigationSidebar } from "../../../widgets/navigationSidebar/index";
+import { MyCourses } from "../../../widgets/myCourses/index";
+import { CoursesStatistics } from "../../../widgets/coursesStatistics";
+import { Footer } from "../../../widgets/footer";
+import { StatisticalScheme } from "../../../widgets/statisticalScheme";
 
 export const Profile = () => {
   return (
