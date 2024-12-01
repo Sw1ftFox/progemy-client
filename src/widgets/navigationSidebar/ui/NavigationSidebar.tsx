@@ -1,9 +1,9 @@
 import React from "react";
-import { Courses } from "../../../shared/index";
-import { Statistics } from "../../../shared/index";
-import { Achievements } from "../../../shared/index";
-import { Settings } from "../../../shared/index";
-import { Logout } from "../../../shared/index";
+import { Courses } from "Shared/index";
+import { Statistics } from "Shared/index";
+import { Achievements } from "Shared/index";
+import { Settings } from "Shared/index";
+import { Logout } from "Shared/index";
 const styles = require("./NavigationSidebar.module.scss");
 
 export const NavigationSidebar = () => {

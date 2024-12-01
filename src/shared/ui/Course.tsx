@@ -2,13 +2,13 @@ import React from "react";
 const styles = require("./Course.module.scss");
 import { CoursesData } from "../index";
 import { CourseIcon } from "../index";
-import ratingStarSrc from "../../assets/icons/course/star.svg";
-import lineSrc from "../../assets/icons/course/Line.svg";
+import ratingStarSrc from "AssetsIcons/course/star.svg";
+import lineSrc from "AssetsIcons/course/Line.svg";
 
 const colorSvg: { [key: string]: string } = {
-  programming: require("../../assets/icons/course/bgcourse3.svg"),
-  design: require("../../assets/icons/course/bgcourse2.svg"),
-  security: require("../../assets/icons/course/bgcourse4.svg"),
+  programming: require("AssetsIcons/course/bgcourse3.svg"),
+  design: require("AssetsIcons/course/bgcourse2.svg"),
+  security: require("AssetsIcons/course/bgcourse4.svg"),
 };
 
 interface CourseProps {

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Logo } from "../../../shared/index";
+import { Logo } from "Shared/index";
 import { Link } from "react-router-dom";
-const headerSharedStyles = require("../../../shared/ui/Header.module.scss");
+const headerSharedStyles = require("SharedUi/Header.module.scss");
 const headerLoggedOutStyles = require("./HeaderLoggedOut.module.scss");
-import dividerSrc from "../../../assets/icons/header/verticalLine.svg";
-import { Dropdown } from "../../../shared/index";
-import { SearchIcon } from "../../../shared/index";
+import dividerSrc from "AssetsIcons/header/verticalLine.svg";
+import { Dropdown } from "Shared/index";
+import { SearchIcon } from "Shared/index";
 
 export const HeaderLoggedOut = () => {
   const [searchQuery, setSearchQuery] = useState("");

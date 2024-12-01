@@ -1,5 +1,5 @@
 import React from "react";
-import { Scheme } from "../../../shared/index";
+import { Scheme } from "Shared/index";
 const styles = require("./StatisticalScheme.module.scss");
 
 export const StatisticalScheme = () => {

@@ -11,6 +11,17 @@ module.exports = (env) => {
     mode,
     entry: "./src/index.tsx",
     resolve: {
+      alias: {
+        Assets: path.resolve(__dirname, "src/assets/"),
+        AssetsFonts: path.resolve(__dirname, "src/assets/fonts/"),
+        AssetsIcons: path.resolve(__dirname, "src/assets/icons/"),
+        AssetsImages: path.resolve(__dirname, "src/assets/images/"),
+        Pages: path.resolve(__dirname, "src/pages/"),
+        Shared: path.resolve(__dirname, "src/shared/"),
+        SharedModel: path.resolve(__dirname, "src/shared/model/"),
+        SharedUi: path.resolve(__dirname, "src/shared/ui/"),
+        Widgets: path.resolve(__dirname, "src/widgets/"),
+      },
       extensions: [".ts", ".tsx", ".js", ".css", ".scss"],
     },
     output: {

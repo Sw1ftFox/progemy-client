@@ -1,9 +1,9 @@
 import React from "react";
-import { Arrow } from "../../../shared/index";
-import { Circle } from "../../../shared/index";
+import { Arrow } from "Shared/index";
+import { Circle } from "Shared/index";
 const styles = require("./Carousel.module.scss");
-import { slidesArray } from "../../../shared/index";
-import { useCarousel } from "../../../shared/index";
+import { slidesArray } from "Shared/index";
+import { useCarousel } from "Shared/index";
 
 export const Carousel = () => {
   const totalSlides = slidesArray.length;

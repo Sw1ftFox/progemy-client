@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 const styles = require("./ProgCard.module.scss");
-const imageSrc = require("../../assets/icons/carousel/programmingCard/Picture.png");
-import cornerSrc from "../../assets/icons/carousel/programmingCard/Corner.svg";
-import lineSrc from "../../assets/icons/carousel/programmingCard/Line.svg";
-import cPlusSrc from "../../assets/icons/carousel/programmingCard/C++.svg";
-import goSrc from "../../assets/icons/carousel/programmingCard/Go.svg";
-import jsSrc from "../../assets/icons/carousel/programmingCard/JS.svg";
-import pythonSrc from "../../assets/icons/carousel/programmingCard/Python.svg";
+const imageSrc = require("AssetsIcons/carousel/programmingCard/Picture.png");
+import cornerSrc from "AssetsIcons/carousel/programmingCard/Corner.svg";
+import lineSrc from "AssetsIcons/carousel/programmingCard/Line.svg";
+import cPlusSrc from "AssetsIcons/carousel/programmingCard/C++.svg";
+import goSrc from "AssetsIcons/carousel/programmingCard/Go.svg";
+import jsSrc from "AssetsIcons/carousel/programmingCard/JS.svg";
+import pythonSrc from "AssetsIcons/carousel/programmingCard/Python.svg";
 
 interface SlideProps {
   isActive: boolean;
@@ -16,11 +16,7 @@ export const ProgCard = ({ isActive }: SlideProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (isActive) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
+    setIsVisible(isActive);
   }, [isActive]);
 
   return (

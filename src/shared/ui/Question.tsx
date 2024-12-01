@@ -1,6 +1,6 @@
 import React from "react";
 const styles = require("./Question.module.scss");
-import btnSrc from "../../assets/icons/questions/question/Plus.svg";
+import btnSrc from "AssetsIcons/questions/question/Plus.svg";
 
 export const Question = () => {
   return (

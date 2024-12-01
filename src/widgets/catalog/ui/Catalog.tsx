@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Course } from "../../../shared/index";
+import { Course } from "Shared/index";
 const styles = require("./Catalog.module.scss");
-import { coursesData } from "../../../shared/model/coursesData";
-import arrowSrc from "../../../assets/icons/catalog/arrow.svg";
-import { getCourseCountText } from "../../../shared/ui/helpers";
+import { coursesData } from "SharedModel/coursesData";
+import arrowSrc from "AssetsIcons/catalog/arrow.svg";
+import { getCourseCountText } from "SharedUi/helpers";
 import { Link } from "react-router-dom";
 
 export const Catalog = () => {

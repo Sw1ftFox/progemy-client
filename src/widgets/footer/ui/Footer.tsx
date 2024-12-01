@@ -1,12 +1,12 @@
 import React from "react";
-import { Logo } from "../../../shared/index";
-import { VkIcon } from "../../../shared/index";
-import { TelegramIcon } from "../../../shared/index";
-import { YoutubeIcon } from "../../../shared/index";
-import { DiscordIcon } from "../../../shared/index";
+import { Logo } from "Shared/index";
+import { VkIcon } from "Shared/index";
+import { TelegramIcon } from "Shared/index";
+import { YoutubeIcon } from "Shared/index";
+import { DiscordIcon } from "Shared/index";
 const styles = require("./Footer.module.scss");
-import lineSrc from "../../../assets/icons/footer/line.svg";
-import ellipseSrc from "../../../assets/icons/footer/ellipse.svg";
+import lineSrc from "AssetsIcons/footer/line.svg";
+import ellipseSrc from "AssetsIcons/footer/ellipse.svg";
 
 export const Footer = () => {
   return (

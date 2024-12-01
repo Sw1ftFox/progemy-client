@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 const styles = require("./Design.module.scss");
-const imageSrc = require("../../assets/icons/carousel/designCard/Picture.png");
-import cornerSrc from "../../assets/icons/carousel/designCard/Corner.svg";
+const imageSrc = require("AssetsIcons/carousel/designCard/Picture.png");
+import cornerSrc from "AssetsIcons/carousel/designCard/Corner.svg";
 
 interface SlideProps {
   isActive: boolean;
@@ -11,11 +11,7 @@ export const DesignCard = ({ isActive }: SlideProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (isActive) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
+    setIsVisible(isActive);
   }, [isActive]);
 
   return (

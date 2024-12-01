@@ -1,7 +1,7 @@
 import React from "react";
 const styles = require("./Authorization.module.scss");
-import nickname from "../../../assets/icons/authorization/nickname.svg";
-import password from "../../../assets/icons/authorization/password.svg";
+import nickname from "AssetsIcons/authorization/nickname.svg";
+import password from "AssetsIcons/authorization/password.svg";
 import { Link, useNavigate } from "react-router-dom";
 
 export const Authorization = () => {

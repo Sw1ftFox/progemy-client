@@ -11,9 +11,41 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react",
+    "baseUrl": "./src",
+    "paths": {
+      "Assets/*": [
+        "assets/*"
+      ],
+      "AssetsFonts/*": [
+        "assets/fonts/*"
+      ],
+      "AssetsIcons/*": [
+        "assets/icons/*"
+      ],
+      "AssetsImages/*": [
+        "assets/images/*"
+      ],
+      "Pages/*": [
+        "pages/*"
+      ],
+      "Shared/*": [
+        "shared/*"
+      ],
+      "SharedModel/*": [
+        "shared/model/*"
+      ],
+      "SharedUi/*": [
+        "shared/ui/*"
+      ],
+      "Widgets/*": [
+        "widgets/*"
+      ]
+    },
   },
   "include": [
-    "./src/**/*.tsx", "./src/**/*.ts", "./typings/*.ts"
+    "./src/**/*.tsx",
+    "./src/**/*.ts",
+    "./typings/*.ts"
   ],
   "exclude": [
     "node_modules"

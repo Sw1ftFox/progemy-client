@@ -1,7 +1,7 @@
 import React from "react";
 const styles = require("./MyCourses.module.scss");
-import { coursesData } from "../../../shared/model/coursesData";
-import { Course } from "../../../shared";
+import { coursesData } from "SharedModel/coursesData";
+import { Course } from "Shared/index";
 
 export const MyCourses = () => {
   return (

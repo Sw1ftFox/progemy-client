@@ -1,6 +1,6 @@
 import React from "react";
 const styles = require("./CoursesStatistics.module.scss");
-import { myCoursesData } from "../../../shared/model/myCoursesData";
+import { myCoursesData } from "SharedModel/myCoursesData";
 
 export const CoursesStatistics = () => {
   return (

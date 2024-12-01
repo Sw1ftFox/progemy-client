@@ -1,9 +1,9 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 const styles = require("./Registration.module.scss");
-import nickname from "../../../assets/icons/registration/nickname.svg";
-import email from "../../../assets/icons/registration/email.svg";
-import password from "../../../assets/icons/registration/password.svg";
+import nickname from "AssetsIcons/registration/nickname.svg";
+import email from "AssetsIcons/registration/email.svg";
+import password from "AssetsIcons/registration/password.svg";
 
 export const Registration = () => {
   const navigate = useNavigate();

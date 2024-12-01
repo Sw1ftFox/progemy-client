@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
-import { HomePage } from "../../pages/homePage";
-import { Registration } from "../../pages/registration/index";
-import { Authorization } from "../../pages/authorization/index";
-import { Profile } from "../../pages/profile";
+import { HomePage } from "Pages/homePage";
+import { Registration } from "Pages/registration";
+import { Authorization } from "Pages/authorization";
+import { Profile } from "Pages/profile";
 
 const App = () => (
   // <BrowserRouter></BrowserRouter> - пока нет сервера, так и живем

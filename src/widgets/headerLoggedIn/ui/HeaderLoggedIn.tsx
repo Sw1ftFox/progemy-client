@@ -1,11 +1,11 @@
 import React from "react";
-import { Logo } from "../../../shared/index";
+import { Logo } from "Shared/index";
 import { Link } from "react-router-dom";
-const headerSharedStyles = require("../../../shared/ui/Header.module.scss");
+const headerSharedStyles = require("SharedUi/Header.module.scss");
 const headerLoggedInStyles = require("./HeaderLoggedIn.module.scss");
-import { Dropdown } from "../../../shared/index";
-import { NotificationsIcon } from "../../../shared/index";
-const avatarSrc = require("../../../assets/images/header/avatar.jpg");
+import { Dropdown } from "Shared/index";
+import { NotificationsIcon } from "Shared/index";
+const avatarSrc = require("AssetsImages/header/avatar.jpg");
 
 export const HeaderLoggedIn = () => {
   return (

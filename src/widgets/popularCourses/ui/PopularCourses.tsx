@@ -1,7 +1,7 @@
 import React from "react";
-import { Course } from "../../../shared/index";
+import { Course } from "Shared/index";
 const styles = require("./PopularCourses.module.scss");
-import { popularCoursesData } from "../../../shared/model/coursesData";
+import { popularCoursesData } from "SharedModel/coursesData";
 
 export const PopularCourses = () => {
   return (

@@ -1,8 +1,8 @@
 import React from "react";
-import { Author } from "../../../shared/ui/Author";
+import { Author } from "SharedUi/Author";
 const styles = require("./BestAuthors.module.scss");
-import { authorsData } from "../../../shared/model/authorsData";
-import lineSrc from "../../../assets/icons/bestauthor/Line.svg";
+import { authorsData } from "SharedModel/authorsData";
+import lineSrc from "AssetsIcons/bestauthor/Line.svg";
 
 export const BestAuthors = () => {
   return (

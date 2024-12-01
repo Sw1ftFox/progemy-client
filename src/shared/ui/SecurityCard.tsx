@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Corner } from "../index";
 import { Ellipse } from "../index";
 const styles = require("./Security.module.scss");
-const imageSrc = require("../../assets/icons/carousel/infosecurityCard/Picture.png");
+const imageSrc = require("AssetsIcons/carousel/infosecurityCard/Picture.png");
 
 interface SlideProps {
   isActive: boolean;
@@ -12,11 +12,7 @@ export const SecurityCard = ({ isActive }: SlideProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (isActive) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
+    setIsVisible(isActive);
   }, [isActive]);
 
   return (
