@@ -1,0 +1,47 @@
+.main {
+  background-color: var(--darkGrey-color);
+  padding-top: 3vw;
+  padding-bottom: 8vw;
+
+  &__title,
+  &__declaration,
+  &__authors {
+    margin: 0 auto;
+  }
+
+  &__title {
+    color: var(--white-color);
+    width: 50%;
+    font-weight: 700;
+    font-size: 3vw;
+    text-align: center;
+    font-family: sans-serif;
+  }
+
+  &__declaration,
+  &__authors {
+    margin-top: 2%;
+  }
+
+  &__declaration {
+    color: var(--lightGrey-color);
+    width: 70%;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.5vw;
+    line-height: 156%;
+    font-family: sans-serif;
+  }
+
+  &__line {
+    width: 80%;
+    height: 2px;
+    margin: 2% 10% 0 10%;
+  }
+
+  &__authors {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+  }
+}

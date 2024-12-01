@@ -1,0 +1,82 @@
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  background-color: var(--black-color);
+
+  &__slider {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+  }
+
+  &__slider_ArrowLeft,
+  &__slider_ArrowRight {
+    width: 10%;
+    cursor: pointer;
+  }
+
+  &__sliderInfo {
+    width: 80%;
+  }
+
+  &__slider_ArrowRight {
+    transform: rotate(180deg);
+  }
+
+  &__slider_ArrowLeft path,
+  &__slider_ArrowRight path {
+    transition: 0.5s;
+  }
+
+  &__slider_ArrowLeft:hover path,
+  &__slider_ArrowRight:hover path {
+    stroke: var(--accent-color);
+  }
+
+  &__dots {
+    width: 15%;
+    margin: 0 auto;
+    margin-bottom: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__dots_FullCircle {
+    cursor: pointer;
+    fill: var(--accent-color);
+  }
+
+  &__dots_HollowCircle {
+    cursor: pointer;
+  }
+
+  &__dots_HollowCircle:hover {
+    fill: var(--accent-color);
+  }
+}
+
+@media (width < 1000px) {
+  .carousel {
+
+    &__slider_ArrowLeft,
+    &__slider_ArrowRight {
+      width: 5%;
+    }
+
+    &__dots {
+      justify-content: space-between;
+      width: 25%;
+    }
+
+    &__dots_HollowCircle {
+      width: 10%;
+    }
+  }
+}

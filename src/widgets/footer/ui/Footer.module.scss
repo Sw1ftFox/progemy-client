@@ -1,0 +1,139 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5vw;
+  padding-bottom: 3vw;
+
+  background-color: var(--black-color);
+
+  &__community {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto 2% auto;
+  }
+
+  &__community_socnetwork {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: flex-end;
+  }
+
+  &__community_socnetwork_title {
+    font-family: var(--isocpeur-font), sans-serif;
+    font-weight: 400;
+    font-size: 2.5vw;
+    color: var(--white-color);
+  }
+
+  &__community_socnetwork_icons {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: flex-end;
+  }
+
+  &__community_socnetwork_icons_vk,
+  &__community_socnetwork_icons_telegram,
+  &__community_socnetwork_icons_youtube,
+  &__community_socnetwork_icons_discord {
+    width: 13%;
+    margin-right: 8%;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  &__firstLine {
+    width: 94%;
+    height: 2px;
+    margin: 0 auto 3% auto;
+  }
+
+  &__info {
+    width: 90%;
+    margin: 0 auto 3% auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__info_knowledge,
+  &__info_services,
+  &__info_support {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__info_knowledge_title,
+  &__info_knowledge_text,
+  &__info_services_title,
+  &__info_services_text,
+  &__info_support_title,
+  &__info_support_text {
+    font-family: var(--isocpeur-font), sans-serif;
+    line-height: 156%;
+  }
+
+  &__info_knowledge_title,
+  &__info_services_title,
+  &__info_support_title {
+    font-size: 2.2vw;
+    font-weight: 600;
+    color: var(--white-color);
+  }
+
+  &__info_knowledge_text,
+  &__info_services_text,
+  &__info_support_text {
+    font-size: 2vw;
+    font-weight: 400;
+    cursor: pointer;
+    color: var(--lightGrey-color);
+    transition: 0.5s;
+  }
+
+  &__info_knowledge_text:hover,
+  &__info_services_text:hover,
+  &__info_support_text:hover {
+    color: var(--white-color);
+  }
+
+  &__secondLine {
+    width: 94%;
+    height: 2px;
+    margin: 0 auto 1% auto;
+  }
+
+  &__copyright {
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--white-color);
+    font-family: var(--isocpeur-font), sans-serif;
+    font-weight: 400;
+    font-size: 2vw;
+    line-height: 150%;
+  }
+
+  &__copyright_date,
+  &__copyright_privacypolicy,
+  &__copyright_terms {
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  &__copyright_date:hover,
+  &__copyright_privacypolicy:hover,
+  &__copyright_terms:hover {
+    color: var(--lightGrey-color);
+  }
+
+  &__copyright_ellipse {
+    margin: 0 1.5%;
+  }
+}

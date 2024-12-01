@@ -1,0 +1,22 @@
+.main {
+  background-color: var(--black-color);
+  padding-top: 5vw;
+  padding-bottom: 3vw;
+
+  &__title {
+    color: var(--white-color);
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 3vw;
+    margin-bottom: 5%;
+    padding-left: 3%;
+  }
+
+  &__courses {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,71 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 8vw;
+  background-color: var(--darkGrey-color);
+
+  &__catalog,
+  &__resources,
+  &__profileInfo__nickname {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  &__catalog__text,
+  &__resources__text,
+  &__navigations__message,
+  &__navigations__help,
+  &__profileInfo__nickname__text {
+    font-family: var(--isocpeur-font), sans-serif;
+    color: var(--lightGrey-color);
+    font-size: 2.5vw;
+    transition: 0.5s;
+  }
+
+  &__catalog:hover &__catalog__text,
+  &__resources:hover &__resources__text,
+  &__navigations__message:hover,
+  &__navigations__help:hover,
+  &__profileInfo__nickname:hover &__profileInfo__nickname__text {
+    color: var(--accent-color);
+  }
+
+  &__catalog__dropdown,
+  &__resources__dropdown,
+  &__profileInfo__nickname__dropdown {
+    position: relative;
+    top: 3px;
+    height: 10%;
+    width: 10%;
+    transition: 0.5s;
+  }
+
+  &__catalog:hover &__catalog__dropdown,
+  &__resources:hover &__resources__dropdown,
+  &__profileInfo__nickname:hover &__profileInfo__nickname__dropdown {
+    transform: rotate(180deg);
+  }
+
+  &__catalog:hover &__catalog__dropdown path,
+  &__resources:hover &__resources__dropdown path,
+  &__profileInfo__nickname:hover &__profileInfo__nickname__dropdown path {
+    stroke: var(--accent-color);
+  }
+}
+
+@media (width < 600px) {
+  .header {
+    height: 14vw;
+
+    &__catalog__text,
+    &__resources__text,
+    &__navigations__message,
+    &__navigations__help {
+      font-size: 3vw;
+    }
+  }
+}

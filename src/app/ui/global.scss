@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "ISOCPEUR";
+  src: url("AssetsFonts/isocpeur/isocpeur.eot"); /* IE 9 Compatibility Mode */
+  src: url("AssetsFonts/isocpeur/isocpeur.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE < 9 */ url("AssetsFonts/isocpeur/isocpeur.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("AssetsFonts/isocpeur/isocpeur.woff")
+      format("woff"),
+    /* Firefox >= 3.6, any other modern browser */
+      url("AssetsFonts/isocpeur/isocpeur.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+      url("AssetsFonts/isocpeur/isocpeur.svg#isocpeur") format("svg"); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+  font-family: "Space Mono Regular";
+  src: url("AssetsFonts/spacemono/space_mono_regular.eot"); /* IE 9 Compatibility Mode */
+  src: url("AssetsFonts/spacemono/space_mono_regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE < 9 */ url("AssetsFonts/spacemono/space_mono_regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("AssetsFonts/spacemono/space_mono_regular.woff") format("woff"),
+    /* Firefox >= 3.6, any other modern browser */
+      url("AssetsFonts/spacemono/space_mono_regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("AssetsFonts/spacemono/space_mono_regular.svg#space_mono_regular")
+      format("svg"); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+  font-family: "Viaoda Libre Regular";
+  src: url("AssetsFonts/viaodalibre/viaoda_libre_regular.eot"); /* IE 9 Compatibility Mode */
+  src: url("AssetsFonts/viaodalibre/viaoda_libre_regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE < 9 */
+      url("AssetsFonts/viaodalibre/viaoda_libre_regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("AssetsFonts/viaodalibre/viaoda_libre_regular.woff")
+      format("woff"),
+    /* Firefox >= 3.6, any other modern browser */
+      url("AssetsFonts/viaodalibre/viaoda_libre_regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("AssetsFonts/viaodalibre/viaoda_libre_regular.svg#viaoda_libre_regular")
+      format("svg"); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+  font-family: "RedHatDisplay-Black";
+  src: url("AssetsFonts/redhatdisplay/redhatdisplay-black.eot"); /* IE 9 Compatibility Mode */
+  src: url("AssetsFonts/redhatdisplay/redhatdisplay-black.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE < 9 */
+      url("AssetsFonts/redhatdisplay/redhatdisplay-black.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("AssetsFonts/redhatdisplay/redhatdisplay-black.woff")
+      format("woff"),
+    /* Firefox >= 3.6, any other modern browser */
+      url("AssetsFonts/redhatdisplay/redhatdisplay-black.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("AssetsFonts/redhatdisplay/redhatdisplay-black.svg#redhatdisplay-black")
+      format("svg"); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+  font-family: "Montserrat Black";
+  src: url("AssetsFonts/montserrat/montserrat_black.eot"); /* IE 9 Compatibility Mode */
+  src: url("AssetsFonts/montserrat/montserrat_black.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE < 9 */ url("AssetsFonts/montserrat/montserrat_black.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("AssetsFonts/montserrat/montserrat_black.woff") format("woff"),
+    /* Firefox >= 3.6, any other modern browser */
+      url("AssetsFonts/montserrat/montserrat_black.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("AssetsFonts/montserrat/montserrat_black.svg#montserrat_black")
+      format("svg"); /* Chrome < 4, Legacy iOS */
+}
+
+:root {
+  --accent-color: #7cffd8;
+  --white-color: #ffffff;
+  --darkGrey-color: #1e1f25;
+  --mediumGrey-color: #2c2f33;
+  --lightGrey-color: #adb3bf;
+  --isocpeur-font: "ISOCPEUR";
+  --spacemono-font: "Space Mono Regular";
+  --viaodalibre-font: "Viaoda Libre Regular";
+  --redhatdisplay-font: "RedHatDisplay-Black";
+  --montserrat-font: "Montserrat Black";
+  --darkBlue-color: #272a34;
+  --black-color: #141618;
+  --pink-color: #f4b9b9;
+  --border-color: #646775;
+  --statistics-color: #c8d3f1;
+}
+
+/* Scrollbars */
+
+::-webkit-scrollbar {
+  width: 1vw;
+}
+::-webkit-scrollbar-track {
+  width: 5px;
+  background: #1e1f25;
+}
+::-webkit-scrollbar-thumb {
+  width: 1em;
+  background-color: rgba($color: #49a78d, $alpha: 0.2);
+  // outline: 1px solid #49a78d;
+  border-radius: 1rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #2e6a59;
+}

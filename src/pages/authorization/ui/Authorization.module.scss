@@ -1,0 +1,207 @@
+.authorization {
+  width: 100%;
+  height: 100vh;
+  background-image: url(AssetsIcons/authorization/bg.svg);
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__window {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: var(--darkBlue-color);
+    border-radius: 10px;
+    border: 1px solid var(--accent-color);
+    padding: 3% 0;
+  }
+
+  &__title {
+    color: var(--white-color);
+    font-family: var(--isocpeur-font), sans-serif;
+    font-size: 2.5vw;
+    margin: 2% 0;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  &__form__element {
+    margin-bottom: 2%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__form__element_img {
+    position: absolute;
+    width: 2%;
+    margin-left: 0.5%;
+  }
+
+  &__form__element_input {
+    width: 100%;
+    padding: 1%;
+    padding-left: 10%;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    font-size: 1.8vw;
+    font-family: var(--isocpeur-font), sans-serif;
+    color: var(--border-color);
+    background: transparent;
+  }
+
+  &__form__element_input:enabled {
+    color: var(--white-color);
+  }
+
+  &__resetPassword_link {
+    text-decoration: none;
+    font-family: var(--isocpeur-font), sans-serif;
+    color: var(--border-color);
+    font-size: 1.2vw;
+
+    transition: 0.3s;
+  }
+
+  &__resetPassword_link:hover {
+    color: var(--accent-color);
+  }
+
+  &__form__login {
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    font-size: 1.4vw;
+    font-family: var(--spacemono-font), sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s;
+
+    color: var(--darkGrey-color);
+    background-color: var(--accent-color);
+    text-align: center;
+    border-radius: 5px;
+    width: 8vw;
+    padding: 0.7% 0;
+    border: none;
+  }
+
+  &__form__login:hover {
+    color: var(--white-color);
+    background-color: transparent;
+  }
+}
+
+@media (width < 950px) {
+  .authorization {
+    &__window {
+      width: 70%;
+      height: 70vh;
+    }
+
+    &__title {
+      margin-top: 10%;
+      font-size: 3vw;
+    }
+
+    &__form {
+      width: 70%;
+    }
+
+    &__form__element_input {
+      padding-left: 6%;
+      font-size: 2vw;
+    }
+
+    &__resetPassword_link {
+      font-size: 1.6vw;
+    }
+
+    &__form__login {
+      font-size: 1.8vw;
+      padding: 1.5% 2%;
+      width: 20%;
+      white-space: nowrap;
+    }
+  }
+}
+
+@media (width < 800px) {
+  .authorization {
+    &__window {
+      height: 60vh;
+    }
+
+    &__title {
+      margin-top: 9%;
+    }
+  }
+}
+
+@media (width < 600px) {
+  .authorization {
+    &__window {
+      width: 80%;
+    }
+
+    &__title {
+      font-size: 3.5vw;
+    }
+
+    &__form__element_img {
+      width: 3%;
+      margin-left: 1%;
+    }
+
+    &__form__element_input {
+      padding-left: 9%;
+      font-size: 3vw;
+    }
+
+    &__resetPassword_link {
+      font-size: 2.4vw;
+    }
+
+    &__form__login {
+      font-size: 2.6vw;
+      width: 25%;
+    }
+  }
+}
+
+@media (width < 450px) {
+  .authorization {
+    &__window {
+      height: 50vh;
+    }
+
+    &__title {
+      font-size: 5vw;
+    }
+
+    &__form__element_img {
+      width: 5%;
+      margin-left: 1.5%;
+    }
+
+    &__form__element_input {
+      padding-left: 13%;
+      font-size: 4vw;
+    }
+
+    &__resetPassword_link {
+      font-size: 3vw;
+    }
+
+    &__form__login {
+      font-size: 3.5vw;
+      width: 35%;
+    }
+  }
+}

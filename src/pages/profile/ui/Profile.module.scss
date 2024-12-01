@@ -1,0 +1,7 @@
+.profile {
+  background-color: var(--black-color);
+  &__navAndCourses {
+    display: flex;
+    justify-content: space-between;
+  }
+}

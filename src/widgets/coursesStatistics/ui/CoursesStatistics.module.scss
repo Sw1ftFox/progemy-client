@@ -1,0 +1,146 @@
+.statistics {
+  width: 85%;
+  padding-bottom: 2%;
+
+  &__title {
+    color: var(--white-color);
+    width: 30%;
+    font-weight: 700;
+    font-size: 3vw;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 2%;
+  }
+
+  &__description {
+    margin-left: 1%;
+    margin-top: 1%;
+    width: 70%;
+  }
+
+  &__description__container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 95%;
+    color: var(--statistics-color);
+    font-family: var(--isocpeur-font), sans-serif;
+    font-size: 1.2vw;
+    font-weight: 500;
+    margin: 0 auto 2% auto;
+    padding-left: 3%;
+    text-align: center;
+    margin-right: 1vw;
+  }
+
+  &__description__container__title,
+  &__description__container__begin,
+  &__description__container__author,
+  &__description__container__lastView,
+  &__description__container__status {
+    margin: 0 auto;
+  }
+
+  &__container {
+    margin-left: 1%;
+    margin-top: 1%;
+    overflow-y: auto;
+    height: 24vw;
+    width: 70%;
+  }
+
+  &__container__elem {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 95%;
+    color: var(--white-color);
+    font-family: var(--isocpeur-font), sans-serif;
+    font-size: 1.5vw;
+    font-weight: 400;
+    background: var(--mediumGrey-color);
+    border-radius: 25px;
+    height: 3vw;
+    margin: 0 auto 2% auto;
+    padding-left: 3%;
+    text-align: center;
+  }
+
+  &__container__elem__title {
+    font-weight: 500;
+    font-size: 1.3vw;
+    margin: auto 0;
+    font-family: var(--redhatdisplay-font), sans-serif;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  &__container__elem__title:hover {
+    color: var(--accent-color);
+  }
+
+  &__container__elem__begin {
+    margin: auto;
+  }
+
+  &__container__elem__author,
+  &__container__elem__lastView,
+  &__container__elem__status {
+    margin: auto;
+    color: var(--statistics-color);
+  }
+}
+
+@media (width < 650px) {
+  .statistics {
+    &__description__container {
+      font-size: 1.4vw;
+    }
+
+    &__container__elem {
+      font-size: 1.7vw;
+    }
+
+    &__container__elem__title {
+      font-size: 1.5vw;
+    }
+  }
+}
+
+@media (width < 500px) {
+  .statistics {
+    &__description__container {
+      font-size: 1.8vw;
+    }
+
+    &__container__elem {
+      font-size: 1.9vw;
+      height: 4vw;
+      border-radius: 10px;
+    }
+
+    &__container__elem__title {
+      font-size: 1.7vw;
+    }
+  }
+}
+
+@media (width < 400px) {
+  .statistics {
+    &__description__container {
+      font-size: 2.2vw;
+    }
+
+    &__container__elem {
+      font-size: 2.2vw;
+      height: 5vw;
+      border-radius: 5px;
+    }
+
+    &__container__elem__title {
+      font-size: 2vw;
+    }
+  }
+}

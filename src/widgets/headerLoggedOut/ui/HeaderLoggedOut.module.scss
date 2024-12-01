@@ -1,0 +1,149 @@
+.header {
+  &__divider {
+    border: 1px solid #3a3d43;
+    width: 5vw;
+    height: 0px;
+    transform: rotate(-90deg);
+    flex-shrink: 1;
+  }
+
+  &__catalog__dropdown {
+    left: 10px;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+  }
+
+  &__search__btn {
+    position: relative;
+    left: 10%;
+
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  &__search__icon {
+    width: 2.1vw;
+    height: 2.2vw;
+    position: relative;
+    top: 2px;
+  }
+
+  &__search__icon:hover {
+    stroke: var(--white-color);
+  }
+
+  &__search__input {
+    font-size: 1.5vw;
+    text-indent: 4vw;
+
+    border: 1px solid #7cffd8;
+    border-radius: 5px;
+    width: 27vw;
+    height: 3.5vw;
+
+    font-family: sans-serif;
+    color: var(--lightGrey-color);
+    background-color: var(--darkBlue-color);
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  &__buttons__login,
+  &__buttons__signup {
+    font-size: 1.6vw;
+    font-family: var(--spacemono-font), sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  &__buttons__login {
+    margin-right: 1vw;
+
+    color: var(--white-color);
+  }
+
+  &__buttons__login:hover {
+    color: var(--accent-color);
+  }
+
+  &__buttons__signup {
+    color: var(--darkGrey-color);
+    background-color: var(--accent-color);
+    text-align: center;
+    border-radius: 3px;
+    width: 10vw;
+    padding: 3% 0;
+  }
+
+  &__buttons__signup:hover {
+    color: var(--white-color);
+    background-color: transparent;
+    border: none;
+  }
+}
+
+@media (width < 600px) {
+  .header {
+    &__divider {
+      width: 8%;
+    }
+
+    &__catalog,
+    &__resources {
+      width: 14%;
+      justify-content: space-around;
+      position: relative;
+      right: 2%;
+    }
+
+    &__resources {
+      left: 0.5%;
+    }
+
+    &__catalog__dropdown,
+    &__resources__dropdown {
+      height: 15%;
+      width: 15%;
+    }
+
+    &__catalog__dropdown {
+      left: 3px;
+    }
+
+    &__search {
+      width: 27%;
+      margin-right: 4%;
+    }
+
+    &__search__input {
+      font-size: 2.2vw;
+      height: 4vw;
+    }
+
+    &__search__icon {
+      width: 2.5vw;
+      height: 2.8vw;
+      left: 3px;
+      top: 1.5px;
+    }
+
+    &__buttons__login,
+    &__buttons__signup {
+      font-size: 2.2vw;
+    }
+
+    &__buttons__signup {
+      width: 12vw;
+      margin-right: 3px;
+    }
+  }
+}
